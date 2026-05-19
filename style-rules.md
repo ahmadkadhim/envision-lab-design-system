@@ -97,7 +97,9 @@ Slide role (cover vs. content vs. thank-you) is communicated through **graphics,
 
 Within a slide, `--el-paper` (#FAF6EE) and `--el-paper-tan` (#F1EAD9) are available for **card insets and panel differentiation**, but never as full slide backgrounds.
 
-**Navy** (`#14233F`) is a text and accent color — section prefixes, emphasis, small UI — never a background surface. **Forest/sage** greens are reserved for charts, data-viz, and controlled accent moments only.
+**Navy** (`#14233F`) is a text and accent color — section prefixes, emphasis, small UI — never a background surface.
+
+**Forest/sage** greens are reserved for charts, data-viz, and controlled accent moments only.
 
 ### Type stack (the only allowed families)
 
@@ -110,7 +112,7 @@ If you write `font-family: Inter` / `Roboto` / `Helvetica Neue` / `Calibri` / `T
 
 ### Accent discipline
 
-- **Gold** (`#B9913F` on light, `#E8B84C` on navy) is the signature accent. Use it for section prefixes, slide numerals, gold rules, single-point accents.
+- **Gold** (`#B9913F`) is the signature accent. Use it for section prefixes, slide numerals, gold rules, single-point accents.
 - **Amber** (`#E8B84C`) and **peach** (`#E89968`) are sourced from the EL logo gradient. Used **sparingly**:
   - Inside motifs (orbital gradients, contour washes).
   - As data-viz second/third colours.
@@ -140,7 +142,7 @@ Tabler Icons only. Curated 28 live in `assets/icons/` at 2px stroke, 24×24 view
 
 Motifs live in `assets/motifs/` and are organised by slide type:
 - Architectural geometry (mashrabiya) → section openers, TOC, thank-you.
-- Topographic flow (dune contours) → roadmap, timeline, programme arc.
+- Topographic flow (dune contours) → timeline, programme arc.
 - Editorial marks (asterisk, corner arrows, brackets) → content slides, small-scale only.
 - Orbital gradients → cover, statement slides, transitions.
 

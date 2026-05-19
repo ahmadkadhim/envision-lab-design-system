@@ -4,26 +4,25 @@ A boutique, government-appropriate visual system for **Envision Lab**, a Dubai-b
 
 The brand reads as **boutique, considered, government-appropriate, warmly authoritative** — never corporate-blue, never Silicon Valley sleek, never academic-dry, never AI-default. The design language carries the same restraint as the writing: **direct, declarative, concrete, no marketing fluff.**
 
-> **Constraint, in one line.** Three surfaces (navy · off-white · beige) used by zone. A serif header voice (Newsreader). DM Sans for body. JetBrains Mono for eyebrows. One warm gold accent + two restrained photographic accents drawn from the EL logo gradient. Generous whitespace. No drop shadows. No emoji. No clip-art icons. No AI-style imagery.
+> **Constraint, in one line.** Single warm cream surface (`#FEFCF7`) for every slide. A serif header voice (Source Serif 4). DM Sans for body. JetBrains Mono for eyebrows. One warm gold accent + two restrained accents (amber, peach) drawn from the EL logo gradient. Generous whitespace. No drop shadows. No emoji. No clip-art icons. No AI-style imagery.
 
 ---
 
-## What changed in v3 (May 2026)
+## What changed in v5 (May 2026)
 
-This is a deliberate departure from the v2 "beige-only + gold" monoculture. The goals were:
+v5 builds on the single-surface system established in v4. Key changes:
 
-1. **Stop looking AI-generated.** Models default to beige + amber + Fraunces + Lucide; this system actively pushes off all four.
-2. **Introduce navy** as a contrast surface for openers, transitions, and statement slides — and as a restrained text accent.
-3. **Reset the type stack.** Newsreader (serif) for headers, DM Sans for body, JetBrains Mono for eyebrows/metadata. Open Sans is retained ONLY for PowerPoint round-trip compatibility — never used in HTML.
-4. **Sparingly add two photographic accents** (amber + peach) drawn from the EL logo gradient, used in motifs, charts, and a small number of intentional moments per slide.
-5. **Demote beige to a contextual surface.** Default content lives on a subtler off-white. Beige carries thank-you, contact, transitions.
-6. **Build a real motif library** — abstract architectural geometry, dune contours, editorial marks, orbital gradients — used by slide type.
-7. **Bundle Tabler icons** (a curated 28) at brand stroke weight, recoloured to navy or gold. Document the CDN for edge cases.
-8. **Add five new slide templates** for the section types the v2 deck was missing: Table of Contents, Roadmap, Timeline, Investment, Roles & Responsibilities.
-9. **Rebuild the Thank-you slide** on a beige surface with three explorable variants (Tweaks toggle).
-10. **Imagery has three sizes** — full-bleed (cover only), half-split (section openers), and small accent (everywhere else, *restrained*). Photos do not appear on content slides as primary visuals; the design carries itself.
+1. **Restructured the programme section.** A generic "Programme" section opener now introduces the programme block (At a Glance → Programme Arc → Programme Flow → Frameworks → Simulation → Outcomes).
+2. **Redesigned "Why Envision Lab."** Replaced left-border card panels with centred gradient icon-circle cards on off-white. Four SVG icons (pencil, play-circle, book, map-pin) sit inside warm gradient circles. DDDD framework and credentials ribbon flow without a divider.
+3. **Genericised template content.** Delivery Team and Section Opener slides now use `[INSERT:]` placeholders throughout — no baked-in facilitator names or programme-specific copy.
+4. **Removed About Envision Lab slide** — redundant with Why Envision Lab.
+5. **Moved Timeline after Thank You** (slide 13) as an optional appendix.
+6. **13-slide deck** (down from 14 in v4).
 
-The brand's spine — **warm-tinted neutrals, signature gold, restraint, the numeral-as-icon, the placeholder-as-visible-marker** — is preserved.
+### Earlier milestones
+
+- **v4** — Single-surface pivot. Replaced the three-zone background rule (navy / off-white / beige) with warm cream throughout. Navy demoted to text/accent only. Swapped Newsreader for Source Serif 4. Added forest/sage chart accents. Introduced the gradient-wave background motif.
+- **v3** — Introduced navy as a contrast surface, added the motif library, bundled Tabler icons, added five new slide templates (TOC, Roadmap, Timeline, Investment, Roles & Responsibilities).
 
 ---
 
@@ -31,7 +30,7 @@ The brand's spine — **warm-tinted neutrals, signature gold, restraint, the num
 
 This system is reconciled against the source PPTX files supplied by Tara:
 
-- `uploads/EnvisionLab_Slide_Template_v3.pptx` — the 16-slide master deck (the v3 system's ground truth).
+- `uploads/EnvisionLab_Slide_Template_v3.pptx` — the original 16-slide master deck.
 - `uploads/Emaar_Change_Management_Agility.pptx` — example deck showing the template in production use.
 - `style-rules.md`, `uploads/differentiators.md`, `uploads/proposal-structures.md` — voice, content, and section-structure rules.
 
@@ -41,24 +40,43 @@ This system is reconciled against the source PPTX files supplied by Tara:
 
 | Path | What it is |
 |---|---|
-| `README.md` | You are here. Brand brief + content + visual + iconography fundamentals. |
-| `style-rules.md` | Voice + content rules (banned words, anti-hallucination, UAE fit). Read this before writing copy. |
-| `colors_and_type.css` | All color, type, geometry, and spacing tokens as CSS custom properties + base element styles. |
-| `SKILL.md` | Agent-Skills compatible front-matter so this folder works in Claude Code. |
-| `preview/` | Design-system tab cards (colors, type, motifs, icons, imagery, spacing, components, brand). |
-| `slides/` | All 15 slide templates (cover, TOC, content, transitions, thank-you). |
-| `documents/` | Long-form A4 document and one-pager samples. (Untouched in v3 — pending separate refresh.) |
-| `assets/` | Logos, photography, motifs, icons. |
-| `assets/photography/` | Five UAE-context training photos for half-split and accent use. |
-| `assets/motifs/` | Thirteen reusable SVG motifs (architectural, topographic, editorial, orbital). |
-| `assets/icons/` | Twenty-eight Tabler icons at brand stroke weight. |
+| `README.md` | You are here. Brand brief + visual foundations. |
+| `style-rules.md` | Voice + content rules (banned words, anti-hallucination, UAE fit) + visual guardrails. |
+| `colors_and_type.css` | All color, type, geometry, and spacing tokens as CSS custom properties + base element styles. Single source of truth. |
+| `slides/` | All 13 slide templates (cover, TOC, content, section openers, thank-you, timeline). |
+| `slides/index.html` | Full deck overview — loads all 13 slides in a scrollable stack. |
+| `documents/` | Long-form A4 document and one-pager samples. (Pending separate refresh.) |
+| `assets/` | Logos, photography, motifs, icons, gradient-wave background. |
+| `assets/photography/` | UAE-context training photos for cover and accent use. |
+| `assets/motifs/` | Reusable SVG motifs (architectural, topographic, editorial, orbital). |
+| `assets/icons/` | Tabler icons at brand stroke weight. |
 | `fonts/` | Open Sans variable .ttfs — retained for PPTX round-trip only. |
+
+---
+
+## Slide templates (13)
+
+| # | Template | File | Role |
+|---|---|---|---|
+| 01 | Cover | `cover.html` | Full-bleed photo + title + client logo placeholder |
+| 02 | Table of Contents | `table-of-contents.html` | 9-item TOC with mashrabiya motif |
+| 03 | Why Envision Lab | `why-envision-lab.html` | Four icon-circle differentiator cards + DDDD framework + credentials |
+| 04 | Programme | `section-opener.html` | Section opener with arch-frame motif + mega numeral |
+| 05 | At a Glance | `at-a-glance.html` | Five-column key facts grid |
+| 06 | Programme Arc | `programme-arc.html` | Multi-day programme timeline |
+| 07 | Programme Flow | `programme-flow.html` | Session-by-session breakdown |
+| 08 | Frameworks | `frameworks.html` | Methodology cards |
+| 09 | Simulation | `simulation.html` | Simulation description with photo accent |
+| 10 | Learning Outcomes | `outcomes.html` | Numbered outcome items |
+| 11 | Delivery Team | `delivery-team.html` | Two facilitator cards with `[INSERT:]` placeholders |
+| 12 | Thank You | `thank-you.html` | Contact info + credential logo badges + skyline photo |
+| 13 | Timeline | `timeline.html` | Milestone timeline (appendix) |
 
 ---
 
 ## Content fundamentals
 
-(Unchanged from v2 — voice, tone, banned vocabulary, placeholder-as-visible-marker. See `style-rules.md` for the full set.)
+(See `style-rules.md` for the full set — voice, tone, banned vocabulary, placeholder-as-visible-marker.)
 
 **Length discipline.**
 - **Headlines:** ≤ 12 words.
@@ -69,7 +87,7 @@ This system is reconciled against the source PPTX files supplied by Tara:
 
 **Banned vocabulary** — do not render: *transformational, world-class, cutting-edge, robust, bespoke, holistic, leverage, empower, ignite, journey, immersive, dynamic, innovative (adj.), unlock, harness, elevate*.
 
-**Placeholders are visible, not invented.** Render `[INSERT: client logo]` verbatim, in italic warm-mid (`--el-mid`).
+**Placeholders are visible, not invented.** Render `[INSERT: client logo]` verbatim, styled with `.el-placeholder` (italic, warm-mid color). Never fill in data you don't have.
 
 **Punctuation.**
 - Middle dot `·` for inline separators.
@@ -81,128 +99,140 @@ This system is reconciled against the source PPTX files supplied by Tara:
 
 ## Visual foundations
 
-### Three-zone background rule
+### Single-surface rule
 
-This is the system's defining rule. Every slide picks one of three surfaces, and **the zone is determined by the slide's role in the deck**:
+Every slide uses **warm cream** (`#FEFCF7`, token `--el-cream`). Never pure white. Never a dark background surface.
 
-| Zone | Token | Hex | Where it appears |
-|---|---|---|---|
-| **Navy** | `--el-navy` | `#14233F` | Cover · Table of Contents · Section openers · Big-statement slides |
-| **Off-white** | `--el-off-white` | `#FCFAF6` | **DEFAULT** content surface — at-a-glance, frameworks, programme arc/flow, simulation, outcomes, roadmap, timeline, investment, roles, all data-heavy slides |
-| **Beige** | `--el-paper` | `#FAF6EE` | Thank-you · Contact · Transitional warm-paper slides between major sections |
+Slide role (cover vs. content vs. thank-you) is communicated through **graphics, type treatment, and layout** — not background color. The amber-peach gradient wave (`slide-bg-gradient-waves.png`), photography, real logos, and type weight at scale carry the visual differentiation.
 
-**Cadence.** A typical proposal opens on navy (cover → TOC), descends into off-white for the body, lifts to navy at each section opener, and closes on beige (thank-you). The navy slides act as breaths between content-heavy stretches.
+Within a slide, these tones are available for **card insets and panel differentiation** — never as full slide backgrounds:
 
-**Never** use beige for the cover or as the default content surface. **Never** use pure white. **Never** use navy for tabular or data-dense content (it kills legibility).
+| Token | Hex | Use |
+|---|---|---|
+| `--el-off-white-2` | `#F6F2EA` | Card backgrounds, inset panels |
+| `--el-paper` | `#FAF6EE` | Subtle card inset |
+| `--el-paper-tan` | `#F1EAD9` | Deeper card inset |
+| `--el-paper-cream` | `#EFE7D6` | Deepest warm inset |
 
 ### Colour
 
-**Type ladder (warm neutrals — no cool greys):** `#1E1D1C` → `#55524E` → `#777167` → `#B5AEA3` → `#D8D2C4`.
+**Type ladder (warm-tinted neutrals — no cool greys):**
 
-**On-navy type ladder:** `#F6F2EA` (warm off-white) → `#BDC4D3` → `#7E8AA1`.
+| Token | Hex | Use |
+|---|---|---|
+| `--el-ink` | `#1E1D1C` | Primary text |
+| `--el-body` | `#55524E` | Body copy |
+| `--el-mid` | `#6D675D` | Metadata, captions |
+| `--el-light` | `#B5AEA3` | Muted labels |
+| `--el-rule` | `#CCC5B5` | Hairlines |
 
-**Surface ladder:** `#FCFAF6` (off-white, default) · `#FAF6EE` (beige) · `#14233F` (navy).
+**Navy** (`--el-navy #14233F`) is a text and accent color — section prefixes, emphasis, small UI. **Never** a background surface.
 
-**Gold accent (retained):** `--el-gold #B9913F`. Used on type accents (section prefixes, slide numerals, small rules) on light surfaces. **`--el-gold-warm #E8B84C`** is the navy-surface variant of the gold.
+**Gold accent (signature):** `--el-gold #B9913F`. Used on section prefixes, slide numerals, gold rules, single-point accents.
 
-**Two new logo-sourced accents** — used sparingly, **never near the logo**:
-- `--el-amber #E8B84C` — yellow-amber pulled from the EL gradient
-- `--el-peach #E89968` — peachy-orange pulled from the EL gradient
+**Two logo-sourced accents** — used sparingly, **never near the logo**:
+- `--el-amber #E8B84C` — yellow-amber from the EL gradient
+- `--el-peach #E89968` — peachy-orange from the EL gradient
 
 **Accent usage rule.** Reserve amber/peach for:
-1. SVG motifs (orbital gradients, dune washes).
-2. Data viz second/third colours.
-3. One or two intentional moments per slide (a status pill, a chart segment, a small motif).
+1. SVG motifs (orbital gradients, dune washes, gradient-wave backgrounds).
+2. Data-viz second/third colours.
+3. One or two intentional accent moments per slide.
 
-Cap at ~2 accent moments per slide. Do **not** use either accent on cover, thank-you, or any slide where the EL logo is prominent — the logo carries its own gradient and should stay the visual anchor.
+Cap at ~2 accent moments per slide. Do **not** use either accent on any slide where the EL logo is prominent.
 
-**Anti-pattern:** any cool grey, pure white, blue-other-than-our-navy, green, red, purple. Hierarchy lives in type weight, scale, and whitespace.
+**Forest/sage greens** (`--el-forest`, `--el-sage` family) are reserved for charts and data-viz accents only.
+
+**Anti-pattern:** any cool grey, pure white, blue-other-than-navy-accent, green outside of data-viz, red, purple.
 
 ### Typography
 
-- **Header / display → Newsreader** (Google Fonts, Production Type). Editorial workhorse serif designed for screen, with weight and elegance. Used for titles, sublines, slide numerals, statement slides. Default is Regular (400); the Tweaks toggle exposes Italic Light (300), Semibold (600), and Bold (700) variants for deck authors to dial the temperature.
-- **Body / UI → DM Sans** (Google Fonts, optical-size variable). Used for body copy, captions, in-card text, buttons.
-- **Eyebrow / tag / metadata → JetBrains Mono** (Google Fonts). Used for section prefixes, all-caps eyebrows, metadata labels, technical numerals (dates, times, page nums, IDs).
-- **Open Sans → legacy only.** Self-hosted variable .ttfs (`fonts/`) are retained so PPTX exports round-trip cleanly with the v2 template. Open Sans is NEVER invoked in HTML deliverables. If you find yourself reaching for it, you're looking at the legacy stack — switch back to the brand stack.
+- **Header / display → Source Serif 4** (Adobe via Google Fonts). Clean bracketed serifs with an optical-size axis. Variable weight 200–900. Used for titles, sublines, slide numerals, statement slides.
+- **Body / UI → DM Sans** (Google Fonts, optical-size variable). Used for body copy, captions, in-card text.
+- **Eyebrow / tag / metadata → JetBrains Mono** (Google Fonts). Used for section prefixes, all-caps eyebrows, metadata labels, technical numerals.
+- **Open Sans → legacy only.** Self-hosted variable .ttfs (`fonts/`) retained for PPTX round-trip. **Never invoked in HTML.**
 
-**Sizing — slide canvas (10" × 5.62"):**
-- Eyebrow / mono label: 9pt
-- Section prefix: 10pt
-- Body: 11pt
-- Subline: 13pt
-- Caption: 8.5pt
-- Title (serif): 34pt
-- Big-statement (serif): 62pt
-- Mega numeral (serif): 120pt
-- Slide numeral (serif): 32pt
+**Sizing — slide canvas (960 × 540 px @ 96 dpi):**
 
-No body text below 8.5pt anywhere. No `font-weight: 100`. Slide titles are Newsreader **Regular**, not Light (light serifs read as anaemic at this scale).
+| Role | Token | Size |
+|---|---|---|
+| Eyebrow / mono label | `--el-fs-eyebrow` | 12.5pt |
+| Section prefix | `--el-fs-section-prefix` | 14pt |
+| Body | `--el-fs-body` | 11pt |
+| Subline | `--el-fs-subline` | 13pt |
+| Caption | `--el-fs-caption` | 8.5pt |
+| Slide title (serif) | `--el-fs-title` | 29pt |
+| Big-statement (serif) | `--el-fs-statement` | 53pt |
+| Mega numeral (serif) | `--el-fs-mega` | 120pt |
+| Slide numeral (serif) | `--el-fs-slide-num` | 27pt |
+
+No body text below 8.5pt anywhere. No `font-weight: 100`. Slide titles are Source Serif 4 **Regular**, not Light.
 
 ### Iconography
 
-**Tabler Icons** ([github.com/tabler/tabler-icons](https://github.com/tabler/tabler-icons), MIT). A curated 28-icon set lives in `assets/icons/` at brand stroke weight (2px, 24×24 viewBox, `currentColor`). Use them at 16–24px on light surfaces (recoloured to `--el-ink` or `--el-gold`) and on navy surfaces (recoloured to `--el-on-navy-1` or `--el-gold-warm`).
+**Tabler Icons** ([github.com/tabler/tabler-icons](https://github.com/tabler/tabler-icons), MIT). A curated set lives in `assets/icons/` at brand stroke weight (2px, 24×24 viewBox, `currentColor`). Use them at 16–24px, recoloured to `--el-ink` or `--el-gold`.
 
-**For edge cases**, pull more from the Tabler CDN:
-```html
-<img src="https://unpkg.com/@tabler/icons/icons/outline/[name].svg" style="filter: …">
-```
-or inline the SVG and set `stroke="currentColor"`. **Never** mix icon families — pick one stroke style and hold the line.
+**Gradient icon-circles** — used on the Why Envision Lab slide: 38px circles with `linear-gradient(135deg, #FDE7C8 0%, #F7CFC1 100%)` background, `#C5675F` icon stroke, 1px `#F7DDC9` border. Centres a 20px SVG icon.
 
-**The numeral is still the primary icon.** Across cards (commitments, frameworks, stages, roles), a small two-digit gold numeral (`01`, `02`, `03`) in JetBrains Mono is the visual anchor. Tabler icons are secondary — a row of metadata, a single domain marker, a delta indicator. The numeral leads.
+**The numeral is still the primary icon.** Across cards (commitments, frameworks, stages, roles), a small two-digit gold numeral (`01`, `02`, `03`) in JetBrains Mono is the visual anchor. Tabler icons are secondary.
 
-**Forbidden as before.** No Office defaults. No emoji. No Unicode pictographs (☎ ✉ ⚙). No icon-font glyphs. No clip-art.
+**Forbidden.** No Office defaults. No emoji. No Unicode pictographs. No clip-art. No mixing icon families.
 
 ### Motif library
 
-Thirteen reusable SVG motifs in `assets/motifs/`, organised by slide type:
+SVG motifs in `assets/motifs/`, organised by slide type:
 
-| Category | Motifs | Used on |
-|---|---|---|
-| **Architectural geometry** (mashrabiya) | `mashrabiya-star`, `mashrabiya-grid`, `arch-frame` | Section openers, TOC, thank-you (large-scale, low opacity) |
-| **Topographic flow** (dune contours) | `contour-lines`, `dune-curves`, `ridge-line` | Roadmap, timeline, programme arc (mid-opacity, behind content) |
-| **Editorial marks** | `asterisk`, `corner-arrow-down-left`, `corner-arrow-up-right`, `bracket-corners` | Content slides (small-scale, accent only) |
-| **Orbital gradients** (atmosphere) | `orbital-navy`, `orbital-gold`, `orbital-peach` | Cover, big-statement, transitions (large blurred fills) |
+| Category | Used on |
+|---|---|
+| **Architectural geometry** (mashrabiya, arch-frame) | Section openers, TOC, thank-you |
+| **Topographic flow** (dune contours) | Timeline, programme arc |
+| **Editorial marks** (asterisk, corner arrows, brackets) | Content slides (small-scale, accent only) |
+| **Orbital gradients** (atmosphere) | Cover, statement slides, transitions |
 
-Motifs use `currentColor` where possible so they take on the parent type colour. Render at low opacity (0.05–0.18 typical for backdrops) so they read as atmosphere, not decoration. **Never** place a motif inside a card or content block.
+The **gradient-wave background** (`slide-bg-gradient-waves.png`) is the primary content-slide atmosphere. Applied at low opacity via CSS multi-background layering.
+
+Motifs use `currentColor` where possible. Render at low opacity (0.05–0.18) so they read as atmosphere, not decoration. **Never** place a motif inside a card or content block.
 
 ### Imagery
 
 **Three patterns. Honour the size — over-large imagery breaks professional expectations for proposals.**
 
-1. **Full-bleed with navy overlay** — Cover only. Photo + 90% navy gradient overlay + warm-cream serif title.
-2. **Half-split** — Section openers and transitions only. Photo occupies 35–45% of the canvas; type and content sit on navy or off-white in the remaining ~60%.
-3. **Small accent** — Everywhere else. Maximum 25% of canvas area. Used to anchor a single content slide (simulation, an outcomes slide, a transitional moment). Most content slides have **no imagery**; the design carries itself.
-
-**Bank:** five UAE-context training photos in `assets/photography/` (coaching, leadership, hero-portrait, whiteboard, meeting), plus two textures (mashrabiya, dunes) used as motif sources, not as content photos. **Never use the textures as full photos** — they live as gradient/SVG inspiration.
+1. **Full-bleed with overlay** — Cover only. Photo + cream gradient overlay + serif title.
+2. **Half-split** — Thank-you and transitions only. Photo occupies 35–45% of canvas; cream gradient wash reveals the content side.
+3. **Small accent** — Everywhere else. Maximum 25% of canvas area. Most content slides have **no imagery**; the design carries itself.
 
 **Hard ban.** No staged corporate stock, no handshakes, no AI-generated imagery, no glowing brains, no abstract networks.
 
 ### Geometry & layout
 
-- **Slide canvas:** `10.00" × 5.62"` (960 × 540 px @ 96 dpi). Honour exactly.
-- **Outer slide margin:** 0.4" (38 px).
-- **Column grid:** 12 columns, 0.1" gutters, used loosely.
-- **Vertical rhythm:** ~24–32 pt baseline.
+- **Slide canvas:** 960 × 540 px @ 96 dpi. Honour exactly.
+- **Outer slide margin:** ~56px (0.58") typical.
+- **Vertical rhythm:** ~28pt baseline (`--el-baseline`).
 - **Whitespace:** generous. Do not pack edge-to-edge.
+- **Corner radii:** `--el-radius-md` (8px) for cards and image frames. Never larger than `--el-radius-lg` (12px). No pills or capsules.
 
-### Borders, rules, and corner radii
+### Borders and rules
 
-- **Hairlines** are `1px solid var(--el-rule)` (`#D8D2C4`) on light, `1px solid var(--el-navy-rule)` on navy.
-- **Gold rules** are `1.5px solid var(--el-gold)`. Used to mark major transitions or anchor a single key element.
-- **Corner radii:** 0 default; up to 2px for inset panels. Never larger. No pills, capsules, or rounded buttons.
+- **Hairlines:** `1px solid var(--el-rule)` (`#CCC5B5`).
+- **Gold rules:** `1.5px solid var(--el-gold)`. Used to mark major transitions.
+- **Card borders:** `1px solid var(--el-peach-soft)` for facilitator/team cards. `1px solid var(--el-gold-25)` for dividers between columns.
 
 ### Shadows, depth, blur, animation
 
-**None.** No drop shadows, no glows, no 3D, no bevels. No frosted glass. No translucent overlays (other than navy/gold gradient washes inside motifs). No motion on slides intended for export; if motion appears in a prototype, restrict to 200–280 ms `ease-out` fades and short slides.
+**None.** No drop shadows, no glows, no 3D, no bevels. No frosted glass. No motion on slides intended for export.
+
+### Logo sourcing rule
+
+Use real logos wherever possible — certifications (KHDA, Dubai SME, ISO marks), client logos, key frameworks (WHO ICOPE, ADDIE, Kirkpatrick). Real logos carry visual authority.
+
+**If you cannot find a high-quality version:** use an `[INSERT:]` placeholder. A `[INSERT: KHDA logo — high-res PNG with transparent bg]` is better than a bad logo or a recreated mark.
 
 ---
 
-## Caveats and asks
+## Caveats
 
-1. **Newsreader, DM Sans, JetBrains Mono** are loaded from Google Fonts CDN. For offline export (government clients, air-gapped review), request `.ttf` bundles and we'll self-host. Open Sans is already self-hosted.
-2. **No vector EL logo.** The rasterised PNG (`assets/envision-lab-logo.png`) is sufficient at on-screen and standard PPTX export resolution but will soften at large print sizes. Request original SVG/EPS/AI.
-3. **Photography is a starter bank.** Five UAE-context images cover most section opener and accent needs. Real client engagements should commission proper photography of facilitators and (with consent) real participants.
+1. **Source Serif 4, DM Sans, JetBrains Mono** are loaded from Google Fonts CDN. For offline export, request `.ttf` bundles and self-host.
+2. **No vector EL logo.** The rasterised PNG (`assets/envision-lab-logo.png`) is sufficient at screen resolution but will soften at large print sizes. Request original SVG/EPS/AI.
+3. **Photography is a starter bank.** Real client engagements should commission proper photography.
 4. **Sample-client logos are not bundled.** Client logos slot in per project via `[INSERT: client logo]` placeholders.
-5. **Documents (`one-pager.html`, `proposal-long-form.html`) are still on the v2 system.** Refresh pending a separate pass.
-
-**Bold ask:** original vector EL logo + a handful of real facilitator portraits + one or two real client lockups would let us swap the placeholders out at the lockup-card level so every new proposal starts fully branded.
+5. **Documents (`one-pager.html`, `proposal-long-form.html`) are still on an earlier system.** Refresh pending a separate pass.
