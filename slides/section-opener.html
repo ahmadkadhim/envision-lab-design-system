@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Section opener · Envision Lab</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html, body { margin: 0; padding: 0; background: #2A2A28; font-family: var(--el-font-sans); }
+  body { display: flex; align-items: center; justify-content: center; min-height: 100vh; }
+  .slide { width: 960px; height: 540px; position: relative; overflow: hidden; box-sizing: border-box; }
+
+  .slide { background: linear-gradient(rgba(254,252,247,0.12), rgba(254,252,247,0.12)), url('../assets/slide-bg-gradient-waves.png') center / cover no-repeat, var(--el-cream); color: var(--el-fg-1); padding: 56px 64px 80px; display: grid; grid-template-rows: auto 1fr; }
+
+  /* arch-frame motif — warm gold atmosphere on cream */
+  .motif { position: absolute; right: -40px; top: 40px; width: 320px; height: 460px; color: var(--el-gold); opacity: 0.10; pointer-events: none; }
+  /* warm gradient bloom replacing the navy glow */
+  .glow { position: absolute; right: -200px; bottom: -200px; width: 600px; height: 600px;
+    background: radial-gradient(circle,
+      rgba(232,184,76,0.12) 0%,
+      rgba(232,153,104,0.08) 35%,
+      rgba(254,252,247,0) 60%);
+    pointer-events: none; }
+
+  .top { position: relative; z-index: 1; display: flex; justify-content: space-between; align-items: flex-start; }
+  .top .eyebrow { font-family: var(--el-font-mono); font-weight: 500; font-size: 11.5pt; color: var(--el-gold); text-transform: uppercase; letter-spacing: var(--el-track-wide); }
+  .top .meta { font-family: var(--el-font-mono); font-size: 8.5pt; color: var(--el-mid); letter-spacing: 0.14em; text-transform: uppercase; }
+
+  .center { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr auto; align-items: center; }
+  .center .label { font-family: var(--el-font-display); font-size: 52pt; font-weight: 400; line-height: 1; color: var(--el-ink); letter-spacing: -0.02em; max-width: 540px; }
+  .center .label .sub { display: block; font-family: var(--el-font-sans); font-size: 13pt; color: var(--el-body); margin-top: 16px; max-width: 480px; line-height: 1.4; }
+  .center .mega { font-family: var(--el-font-display); font-size: 220pt; font-weight: 300; line-height: 0.8; color: var(--el-gold); letter-spacing: -0.04em; opacity: 0.18; padding-right: 8px; }
+
+  .el-slide-foot { left: 64px; right: 64px; }
+</style>
+</head>
+<body>
+  <section class="slide" data-screen-label="04 Programme">
+    <div class="glow"></div>
+    <svg class="motif" viewBox="0 0 240 360" fill="none" stroke="currentColor" stroke-width="1.4">
+      <path d="M20 360 L20 180 Q20 20 120 20 Q220 20 220 180 L220 360"/>
+      <path d="M50 360 L50 195 Q50 50 120 50 Q190 50 190 195 L190 360" opacity="0.6"/>
+      <g opacity="0.45" stroke-width="0.8">
+        <line x1="120" y1="60" x2="120" y2="340"/>
+        <path d="M60 200 Q120 160 180 200"/>
+        <path d="M60 250 Q120 210 180 250"/>
+        <path d="M60 300 Q120 260 180 300"/>
+      </g>
+    </svg>
+
+    <div class="top">
+      <div class="eyebrow"><em class="el-placeholder">[INSERT: Section label]</em></div>
+      <div class="meta">Envision Lab</div>
+    </div>
+
+    <div class="center">
+      <div class="label">
+        Programme
+        <span class="sub"><em class="el-placeholder">[INSERT: One-line programme descriptor — structure, duration, and delivery model.]</em></span>
+      </div>
+      <div class="mega"><em class="el-placeholder">02</em></div>
+    </div>
+
+    <div class="el-slide-foot">
+      <div class="l">Envision Lab</div>
+      <div class="r">04 / 13</div>
+    </div>
+  </section>
+</body>
+</html>

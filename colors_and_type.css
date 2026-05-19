@@ -1,0 +1,396 @@
+/* =========================================================================
+   Envision Lab — Colors & Type · v4 (May 2026)
+
+   Single source of truth for color, typography, geometry, and spacing tokens.
+
+   Warm cream surface throughout — every slide, every role. Contrast lives
+   in type weight + scale, the amber-peach logo gradient, gold accents,
+   and graphic elements (wave motif, photography, real logos). Not in dark
+   background surfaces.
+
+   SINGLE-SURFACE RULE
+     · Cream (#FEFCF7) — every slide. Cover, content, transitions, thank-you.
+     · Slide role is communicated through graphics, type treatment, and
+       layout — never through background color changes.
+
+   Navy (#14233F) is a TEXT AND ACCENT color — never a surface.
+   Forest/sage greens are reserved for charts and data-viz accents.
+
+   LOGO SOURCING RULE
+     Use real logos wherever possible: certifications (KHDA, Dubai SME, ISO),
+     client logos, key frameworks. If a high-quality version (sufficient
+     resolution, transparent background where needed) cannot be found,
+     ask the user rather than omitting or using a placeholder.
+
+   See README.md for the full spec.
+   ========================================================================= */
+
+
+/* -------------------------------------------------------------------------
+   FONTS · Brand stack (self-hosted variable fonts + Google CDN secondaries)
+   ------------------------------------------------------------------------- */
+
+/* Source Serif 4 (Adobe via Google Fonts) — header / display.
+   Clean bracketed serifs with an optical-size axis that refines details
+   at display sizes. Variable weight 200–900, italic, opsz 8–60. */
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap");
+
+/* DM Sans — body / UI. */
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..800;1,9..40,300..800&display=swap");
+
+/* JetBrains Mono — eyebrow / tag / metadata / numerals in technical contexts. */
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300..700;1,300..700&display=swap");
+
+/* Open Sans — kept for PowerPoint export round-trip ONLY.
+   Self-hosted variable font (width + weight axes). Not used in HTML. */
+@font-face {
+  font-family: "Open Sans";
+  src: url("fonts/OpenSans-VariableFont_wdth_wght.ttf") format("truetype-variations"),
+       url("fonts/OpenSans-VariableFont_wdth_wght.ttf") format("truetype");
+  font-weight: 300 800;
+  font-stretch: 75% 100%;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("fonts/OpenSans-Italic-VariableFont_wdth_wght.ttf") format("truetype-variations"),
+       url("fonts/OpenSans-Italic-VariableFont_wdth_wght.ttf") format("truetype");
+  font-weight: 300 800;
+  font-stretch: 75% 100%;
+  font-style: italic;
+  font-display: swap;
+}
+
+
+:root {
+  /* =====================================================================
+     COLOR
+     ===================================================================== */
+
+  /* ---------- Type ladder (warm-tinted neutrals — no cool greys) ---------- */
+  --el-ink:        #1E1D1C; /* primary text on light surfaces */
+  --el-body:       #55524E; /* body copy */
+  --el-mid:        #6D675D; /* metadata, captions */
+  --el-light:      #B5AEA3; /* muted labels, on-dark light type */
+  --el-rule:       #CCC5B5; /* hairlines on light */
+
+  /* ---------- Surface ----------
+     Single cream surface for every slide. Beige/tan tones are available
+     for inset cards and subtle panel differentiation within a slide,
+     but never as a full slide background. */
+  --el-cream:        #FEFCF7; /* THE slide surface — every slide, every role */
+  --el-off-white:    #FEFCF7; /* alias — legacy compat */
+  --el-off-white-2:  #F6F2EA; /* inset panels, card backgrounds */
+  --el-paper:        #FAF6EE; /* card inset, subtle differentiation */
+  --el-paper-tan:    #F1EAD9; /* deeper card inset */
+  --el-paper-cream:  #EFE7D6; /* deepest warm inset */
+
+  /* ---------- Navy (text + accent only — never a surface) ---------- */
+  --el-navy:         #14233F;  /* text accent, emphasis, dark UI moments */
+  --el-navy-soft:    #2A3C5C;  /* secondary navy accent */
+  --el-navy-tint:    #E5E9F0;  /* navy at ~10% — soft fill on cream */
+
+  /* ---------- Forest / sage (chart + data-viz accents only) ---------- */
+  --el-forest:       #1E3D2B;  /* dark green — chart primary, data-viz */
+  --el-forest-soft:  #2D5A3E;  /* mid green — chart secondary */
+  --el-sage:         #6E8B68;  /* sage — chart tertiary, tag fills */
+  --el-sage-light:   #A8BFA4;  /* light sage — soft chart fills */
+  --el-sage-tint:    #E4EBE2;  /* sage at ~10% — soft fill on cream */
+
+  /* ---------- Gold (signature, retained from v2) ---------- */
+  --el-gold:         #B9913F; /* signature gold — accents, section nums, type accent */
+  --el-gold-deep:    #C99225; /* deeper gold — wide-tracked prefix */
+  --el-gold-warm:    #E8B84C; /* warm yellow-gold — soft highlight on dark */
+  --el-gold-pale:    #FED78D; /* soft gold — chart secondary */
+  --el-gold-cream:   #FCEFCC; /* paler cream-gold — soft fill blocks */
+  --el-gold-50:      rgba(185, 145, 63, 0.50);
+  --el-gold-25:      rgba(185, 145, 63, 0.25);
+
+  /* ---------- Accents sourced from the EL logo gradient ----------
+     RULE: Never place these adjacent to the logo (the logo carries its own
+     gradient — let it be the star). Reserve for:
+       · SVG motifs and gradient atmospheres
+       · Data viz second/third colors
+       · One or two intentional moments per slide
+     Cap at ~2 accent moments per slide. */
+  --el-amber:        #E8B84C; /* yellow-amber from logo */
+  --el-amber-soft:   #FAEBC4; /* tinted amber wash */
+  --el-peach:        #E89968; /* peachy-orange from logo */
+  --el-peach-soft:   #F7DDC9; /* tinted peach wash */
+
+  /* ---------- Semantic foreground tokens ---------- */
+  --el-fg-1:        var(--el-ink);
+  --el-fg-2:        var(--el-body);
+  --el-fg-3:        var(--el-mid);
+  --el-fg-4:        var(--el-light);
+  --el-fg-accent:   var(--el-gold);
+
+
+  /* =====================================================================
+     TYPOGRAPHY
+     ===================================================================== */
+
+  /* Family tokens */
+  --el-font-display: "Source Serif 4", "Georgia", serif;
+  --el-font-sans:    "DM Sans", "Inter", system-ui, "Helvetica Neue", Arial, sans-serif;
+  --el-font-mono:    "JetBrains Mono", "SF Mono", "Menlo", "Consolas", monospace;
+  --el-font-legacy:  "Open Sans", "Inter", Arial, sans-serif; /* PPTX round-trip only */
+
+  /* Weights */
+  --el-w-light:    300;
+  --el-w-regular:  400;
+  --el-w-medium:   500;
+  --el-w-semibold: 600;
+  --el-w-bold:     700;
+
+  /* Tracking */
+  --el-track-tight:  -0.01em;
+  --el-track-normal: 0;
+  --el-track-mono:   0.02em;
+  --el-track-caps:   0.14em;  /* sentence-tracked mono labels */
+  --el-track-wide:   0.36em;  /* wide-tracked cover prefix (mono) */
+  --el-track-meta:   0.08em;
+
+  /* Slide-scale sizes (10" × 5.62" canvas / 960 × 540 px) */
+  --el-fs-eyebrow:        12.5pt;  /* prefix-class labels (1.4× v3.1) */
+  --el-fs-section-prefix: 14pt;    /* section prefix (1.4× v3.1) */
+  --el-fs-title:          29pt;    /* slide title (~85% v3.1) */
+  --el-fs-subline:        13pt;
+  --el-fs-body:           11pt;
+  --el-fs-caption:        8.5pt;
+  --el-fs-slide-num:      27pt;
+  --el-fs-statement:      53pt;    /* big-statement slide */
+  --el-fs-mega:           120pt;   /* oversized numeral on transition slides */
+
+  /* Doc-scale (A4 portrait) — retained */
+  --el-fs-doc-h1:    24pt;
+  --el-fs-doc-h2:    16pt;
+  --el-fs-doc-h3:    12pt;
+  --el-fs-doc-body:  10.5pt;
+  --el-fs-doc-meta:  8.5pt;
+
+
+  /* =====================================================================
+     GEOMETRY · SPACING · RULES
+     ===================================================================== */
+
+  --el-margin-slide:  0.4in;
+  --el-baseline:      28pt;
+  --el-rule-thin:     1px;
+  --el-rule-accent:   1.5px;
+
+  --el-radius-0:  0;
+  --el-radius-1:  2px;
+  --el-radius-2:  4px;
+  --el-radius-md: 8px;   /* medium-soft — cards, image frames, accent pills */
+  --el-radius-lg: 12px;  /* generous — large surfaces only */
+
+  /* Spacing scale (pt-based) */
+  --el-sp-1:  4pt;
+  --el-sp-2:  8pt;
+  --el-sp-3:  12pt;
+  --el-sp-4:  16pt;
+  --el-sp-5:  24pt;
+  --el-sp-6:  32pt;
+  --el-sp-7:  48pt;
+  --el-sp-8:  64pt;
+}
+
+
+/* =========================================================================
+   BASE ELEMENTS — plain HTML inherits the warm system on off-white.
+   ========================================================================= */
+html, body {
+  color: var(--el-fg-2);
+  background: var(--el-cream);
+  font-family: var(--el-font-sans);
+  font-weight: var(--el-w-regular);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ---------- Titles & sublines — header voice is the SERIF ---------- */
+h1, .el-h1, .el-title {
+  font-family: var(--el-font-display);
+  font-weight: var(--el-w-regular);
+  color: var(--el-fg-1);
+  font-size: var(--el-fs-title);
+  letter-spacing: var(--el-track-tight);
+  line-height: 1.08;
+  margin: 0;
+  text-wrap: pretty;
+}
+
+h2, .el-h2, .el-subline {
+  font-family: var(--el-font-sans);
+  font-weight: var(--el-w-regular);
+  color: var(--el-fg-2);
+  font-size: var(--el-fs-subline);
+  line-height: 1.4;
+  letter-spacing: var(--el-track-normal);
+  margin: 0;
+  text-wrap: pretty;
+}
+
+/* The mega serif used on big-statement and cover variants */
+.el-statement {
+  font-family: var(--el-font-display);
+  font-weight: var(--el-w-regular);
+  color: var(--el-fg-1);
+  font-size: var(--el-fs-statement);
+  line-height: 0.98;
+  letter-spacing: -0.018em;
+  margin: 0;
+  text-wrap: balance;
+}
+
+/* ---------- Body & captions — sans (DM Sans) ---------- */
+p, .el-body {
+  font-family: var(--el-font-sans);
+  font-weight: var(--el-w-regular);
+  color: var(--el-fg-2);
+  font-size: var(--el-fs-body);
+  line-height: 1.55;
+  margin: 0;
+  text-wrap: pretty;
+}
+
+small, .el-caption {
+  font-family: var(--el-font-sans);
+  font-weight: var(--el-w-regular);
+  color: var(--el-fg-3);
+  font-size: var(--el-fs-caption);
+  line-height: 1.4;
+}
+
+/* ---------- Eyebrows / tags / metadata — JetBrains Mono, ALL CAPS ---------- */
+.el-eyebrow {
+  font-family: var(--el-font-mono);
+  font-weight: var(--el-w-medium);
+  color: var(--el-fg-accent);
+  font-size: var(--el-fs-eyebrow);
+  text-transform: uppercase;
+  letter-spacing: var(--el-track-caps);
+  line-height: 1;
+}
+.el-eyebrow-mid {
+  font-family: var(--el-font-mono);
+  font-weight: var(--el-w-medium);
+  color: var(--el-fg-3);
+  font-size: var(--el-fs-eyebrow);
+  text-transform: uppercase;
+  letter-spacing: var(--el-track-caps);
+  line-height: 1;
+}
+.el-eyebrow-on-navy {
+  font-family: var(--el-font-mono);
+  font-weight: var(--el-w-medium);
+  color: var(--el-gold-warm);
+  font-size: var(--el-fs-eyebrow);
+  text-transform: uppercase;
+  letter-spacing: var(--el-track-caps);
+  line-height: 1;
+}
+
+/* Section prefix — "01 · AT A GLANCE" — JetBrains Mono, gold */
+.el-section-prefix {
+  font-family: var(--el-font-mono);
+  font-weight: var(--el-w-medium);
+  color: var(--el-gold);
+  font-size: var(--el-fs-section-prefix);
+  text-transform: uppercase;
+  letter-spacing: var(--el-track-caps);
+  line-height: 1;
+}
+/* Wide-tracked variant — cover and hero variants */
+.el-section-prefix-wide {
+  font-family: var(--el-font-mono);
+  font-weight: var(--el-w-medium);
+  color: var(--el-gold-warm);
+  font-size: var(--el-fs-section-prefix);
+  text-transform: uppercase;
+  letter-spacing: var(--el-track-wide);
+  line-height: 1;
+}
+
+/* ---------- Numerals ---------- */
+.el-slide-num {
+  font-family: var(--el-font-display);
+  font-weight: var(--el-w-regular);
+  color: var(--el-gold);
+  font-size: var(--el-fs-slide-num);
+  line-height: 1;
+  font-variant-numeric: lining-nums;
+}
+.el-mega-num {
+  font-family: var(--el-font-display);
+  font-weight: var(--el-w-light);
+  color: var(--el-ink);
+  font-size: var(--el-fs-mega);
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  font-variant-numeric: lining-nums;
+}
+.el-card-num {
+  font-family: var(--el-font-mono);
+  font-weight: var(--el-w-medium);
+  color: var(--el-gold);
+  font-size: 12pt;
+  letter-spacing: var(--el-track-mono);
+}
+
+/* ---------- Rules ---------- */
+.el-rule {
+  border: 0;
+  border-top: var(--el-rule-thin) solid var(--el-rule);
+  height: 0;
+  margin: 0;
+}
+.el-rule-gold {
+  border: 0;
+  border-top: var(--el-rule-accent) solid var(--el-gold);
+  height: 0;
+  margin: 0;
+}
+.el-rule-navy {
+  border: 0;
+  border-top: var(--el-rule-thin) solid var(--el-navy-rule);
+  height: 0;
+  margin: 0;
+}
+
+/* ---------- Placeholders ---------- */
+.el-placeholder {
+  font-style: italic;
+  color: var(--el-fg-3);
+  font-weight: var(--el-w-regular);
+}
+
+/* ---------- Slide footer (pinned to bottom of 540px canvas) ----------
+   Always position: absolute. The slide <section> must have position: relative
+   and padding-bottom ≥ 80px to clear the footer. */
+.el-slide-foot {
+  position: absolute;
+  bottom: 36px;
+  left: 56px;
+  right: 56px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-top: 14px;
+  border-top: var(--el-rule-thin) solid var(--el-rule);
+}
+.el-slide-foot .l,
+.el-slide-foot .r {
+  font-family: var(--el-font-mono);
+  font-size: 8.5pt;
+  color: var(--el-fg-3);
+  text-transform: uppercase;
+  letter-spacing: var(--el-track-caps);
+}
+
+/* ---------- Surface wrappers ---------- */
+.el-surface-cream     { background: var(--el-cream);     color: var(--el-fg-2); }
+.el-surface-off-white { background: var(--el-cream);     color: var(--el-fg-2); } /* alias */
+.el-surface-paper     { background: var(--el-paper);     color: var(--el-fg-2); } /* card inset only */

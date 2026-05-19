@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Type — mono</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; padding: 28px; background: var(--el-off-white); }
+  .row { display: grid; gap: 22px; max-width: 880px; margin: 0 auto; }
+  .specimen { display: grid; grid-template-columns: 140px 1fr; gap: 18px; align-items: baseline; padding-bottom: 18px; border-bottom: 1px solid var(--el-rule); }
+  .specimen:last-child { border-bottom: 0; }
+  .label { font-family: var(--el-font-mono); font-weight: 500; font-size: 9pt; letter-spacing: var(--el-track-caps); color: var(--el-fg-3); text-transform: uppercase; }
+  .label em { display: block; font-style: normal; font-weight: 400; margin-top: 4px; font-size: 8.5pt; letter-spacing: 0.04em; }
+</style>
+</head>
+<body>
+  <div class="row">
+    <div class="specimen">
+      <div class="label">Section prefix<em>10pt · JetBrains Mono Medium · gold</em></div>
+      <div class="el-section-prefix">01 · At a glance</div>
+    </div>
+    <div class="specimen">
+      <div class="label">Wide-tracked<em>10pt · 0.36em · gold-warm</em></div>
+      <div class="el-section-prefix-wide">Technical Proposal</div>
+    </div>
+    <div class="specimen">
+      <div class="label">Eyebrow<em>9pt · Medium · all caps</em></div>
+      <div class="el-eyebrow">Day 1 · Morning</div>
+    </div>
+    <div class="specimen">
+      <div class="label">Meta · mid<em>9pt · Medium · mid</em></div>
+      <div class="el-eyebrow-mid">Envision Lab · May 2026</div>
+    </div>
+    <div class="specimen">
+      <div class="label">Page / number<em>10pt · Regular</em></div>
+      <div style="font-family:var(--el-font-mono); font-size:10pt; color:var(--el-fg-3); letter-spacing:0.04em">09 / 18 · 09:00 – 10:30 · AED 24,500</div>
+    </div>
+  </div>
+</body>
+</html>

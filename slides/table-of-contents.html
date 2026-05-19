@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Table of Contents · Envision Lab</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html, body { margin: 0; padding: 0; background: #2A2A28; font-family: var(--el-font-sans); }
+  body { display: flex; align-items: center; justify-content: center; min-height: 100vh; }
+  .slide { width: 960px; height: 540px; position: relative; overflow: hidden; box-sizing: border-box; }
+
+  .slide { background: var(--el-cream); color: var(--el-fg-1); padding: 56px 64px 80px; display: grid; grid-template-rows: auto 1fr; gap: 28px; }
+
+  /* Mashrabiya-grid motif — gold on cream */
+  .motif { position: absolute; right: -120px; top: -120px; width: 460px; height: 460px; color: var(--el-gold); opacity: 0.08; pointer-events: none; }
+
+  .header { position: relative; z-index: 1; display: flex; justify-content: space-between; align-items: flex-end; }
+  .header .title { font-family: var(--el-font-display); font-size: 44pt; font-weight: 400; line-height: 1; color: var(--el-ink); letter-spacing: -0.01em; }
+  .header .meta { font-family: var(--el-font-mono); font-size: 9pt; font-weight: 500; color: var(--el-mid); letter-spacing: 0.14em; text-transform: uppercase; }
+
+  .toc { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: repeat(5, auto); grid-auto-flow: column; column-gap: 56px; row-gap: 0; align-content: start; padding-top: 12px; }
+
+  .item { display: grid; grid-template-columns: 36px 1fr 48px; align-items: baseline; padding: 14px 0; border-top: 1px solid var(--el-rule); }
+  .item .num { font-family: var(--el-font-mono); font-size: 12pt; font-weight: 500; color: var(--el-gold); letter-spacing: 0.06em; }
+  .item .label { font-family: var(--el-font-sans); font-size: 12.5pt; font-weight: 400; color: var(--el-ink); }
+  .item .pg { font-family: var(--el-font-mono); font-size: 9.5pt; font-weight: 500; color: var(--el-mid); text-align: right; }
+
+  .el-slide-foot { left: 64px; right: 64px; }
+</style>
+</head>
+<body>
+  <section class="slide" data-screen-label="02 Table of Contents">
+    <svg class="motif" viewBox="0 0 480 480" fill="none" stroke="currentColor" stroke-width="0.8">
+      <defs>
+        <pattern id="lattice2" x="0" y="0" width="160" height="160" patternUnits="userSpaceOnUse">
+          <g transform="translate(80 80)">
+            <polygon points="0,-70 20,-20 70,0 20,20 0,70 -20,20 -70,0 -20,-20"/>
+            <polygon points="0,-70 20,-20 70,0 20,20 0,70 -20,20 -70,0 -20,-20" transform="rotate(45)"/>
+            <circle r="22"/>
+          </g>
+        </pattern>
+      </defs>
+      <rect width="480" height="480" fill="url(#lattice2)"/>
+    </svg>
+
+    <div class="header">
+      <h1 class="title">Contents</h1>
+      <div class="meta">Proposal · May 2026</div>
+    </div>
+
+    <div class="toc">
+      <div class="item"><div class="num">01</div><div class="label">Why Envision Lab</div><div class="pg">03</div></div>
+      <div class="item"><div class="num">02</div><div class="label">At a glance</div><div class="pg">05</div></div>
+      <div class="item"><div class="num">03</div><div class="label">Programme arc</div><div class="pg">06</div></div>
+      <div class="item"><div class="num">04</div><div class="label">Programme flow</div><div class="pg">07</div></div>
+      <div class="item"><div class="num">05</div><div class="label">Frameworks</div><div class="pg">08</div></div>
+      <div class="item"><div class="num">06</div><div class="label">Simulation</div><div class="pg">09</div></div>
+      <div class="item"><div class="num">07</div><div class="label">Learning outcomes</div><div class="pg">10</div></div>
+      <div class="item"><div class="num">08</div><div class="label">Delivery team</div><div class="pg">11</div></div>
+      <div class="item"><div class="num">09</div><div class="label">Timeline</div><div class="pg">13</div></div>
+    </div>
+
+    <div class="el-slide-foot">
+      <div class="l">Envision Lab</div>
+      <div class="r">02 / 13</div>
+    </div>
+  </section>
+</body>
+</html>

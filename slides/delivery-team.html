@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Delivery Team · Envision Lab</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html, body { margin: 0; padding: 0; background: #2A2A28; font-family: var(--el-font-sans); }
+  body { display: flex; align-items: center; justify-content: center; min-height: 100vh; }
+  .slide { width: 960px; height: 540px; position: relative; overflow: hidden; box-sizing: border-box; }
+
+  .slide {
+    background:
+      linear-gradient(rgba(254,252,247,0.22), rgba(254,252,247,0.22)),
+      url('../assets/slide-bg-gradient-waves.png') center / cover no-repeat,
+      var(--el-off-white);
+    color: var(--el-fg-2);
+    padding: 36px 56px 80px;
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    gap: 0;
+  }
+
+  .prefix { font-family: var(--el-font-mono); font-weight: 500; font-size: var(--el-fs-section-prefix); color: var(--el-gold); text-transform: uppercase; letter-spacing: var(--el-track-caps); margin-bottom: 6px; }
+  .title { font-family: var(--el-font-display); font-weight: 400; font-size: 26pt; color: var(--el-fg-1); line-height: 1.05; letter-spacing: -0.01em; margin: 0; }
+  .subline { font-family: var(--el-font-sans); font-size: 10pt; color: var(--el-fg-2); margin: 6px 0 18px; max-width: 760px; line-height: 1.45; }
+
+  .team { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-self: center; }
+  .fac {
+    background: var(--el-off-white-2);
+    border-radius: var(--el-radius-md);
+    padding: 20px 22px 16px;
+    border-top: 1px solid var(--el-peach-soft);
+    display: grid;
+    grid-template-rows: auto auto auto 1fr;
+    gap: 0;
+  }
+  .fac .role-tag {
+    font-family: var(--el-font-mono); font-weight: 500; font-size: 7.5pt;
+    color: var(--el-gold); text-transform: uppercase; letter-spacing: var(--el-track-caps);
+    margin-bottom: 8px;
+  }
+  .fac .name { font-family: var(--el-font-display); font-weight: 400; font-size: 17pt; color: var(--el-fg-1); line-height: 1.1; letter-spacing: -0.005em; }
+  .fac .creds { font-family: var(--el-font-mono); font-size: 8pt; color: var(--el-fg-3); letter-spacing: 0.04em; margin: 3px 0 10px; }
+  .fac .position { font-family: var(--el-font-sans); font-size: 9pt; color: var(--el-fg-2); margin-bottom: 10px; line-height: 1.35; }
+
+  .highlights { display: grid; gap: 4px; }
+  .hl { display: grid; grid-template-columns: 10px 1fr; gap: 8px; align-items: baseline; }
+  .hl .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--el-gold); margin-top: 6px; }
+  .hl .t { font-family: var(--el-font-sans); font-size: 9pt; color: var(--el-fg-1); line-height: 1.35; }
+
+  .note { font-family: var(--el-font-mono); font-size: 8pt; color: var(--el-fg-3); text-transform: uppercase; letter-spacing: var(--el-track-caps); margin-top: 12px; }
+
+</style>
+</head>
+<body>
+  <section class="slide" data-screen-label="11 Delivery Team">
+    <div>
+      <div class="prefix">08</div>
+      <h1 class="title">Facilitator &amp; Backup Facilitator</h1>
+      <p class="subline">Delivered by experienced UAE-based facilitators with sector and operational depth. A pre-approved backup facilitator ensures programme continuity.</p>
+    </div>
+
+    <div class="team">
+      <div class="fac">
+        <div class="role-tag">Primary Facilitator</div>
+        <div class="name"><em class="el-placeholder">[INSERT: Name]</em></div>
+        <div class="creds"><em class="el-placeholder">[INSERT: Credentials]</em></div>
+        <div class="position"><em class="el-placeholder">[INSERT: Current role and organisation]</em></div>
+        <div class="highlights">
+          <div class="hl"><div class="dot"></div><div class="t"><em class="el-placeholder">[INSERT: Years of experience and sector]</em></div></div>
+          <div class="hl"><div class="dot"></div><div class="t"><em class="el-placeholder">[INSERT: Prior delivery for relevant clients]</em></div></div>
+          <div class="hl"><div class="dot"></div><div class="t"><em class="el-placeholder">[INSERT: Language capability]</em></div></div>
+          <div class="hl"><div class="dot"></div><div class="t"><em class="el-placeholder">[INSERT: Domain specialism]</em></div></div>
+          <div class="hl"><div class="dot"></div><div class="t"><em class="el-placeholder">[INSERT: Additional credential or distinction]</em></div></div>
+        </div>
+      </div>
+
+      <div class="fac">
+        <div class="role-tag">Backup Facilitator</div>
+        <div class="name"><em class="el-placeholder">[INSERT: Name]</em></div>
+        <div class="creds"><em class="el-placeholder">[INSERT: Credentials]</em></div>
+        <div class="position"><em class="el-placeholder">[INSERT: Current role and organisation]</em></div>
+        <div class="highlights">
+          <div class="hl"><div class="dot"></div><div class="t"><em class="el-placeholder">[INSERT: Years of experience and sector]</em></div></div>
+          <div class="hl"><div class="dot"></div><div class="t"><em class="el-placeholder">[INSERT: Prior delivery for relevant clients]</em></div></div>
+          <div class="hl"><div class="dot"></div><div class="t"><em class="el-placeholder">[INSERT: Language capability]</em></div></div>
+          <div class="hl"><div class="dot"></div><div class="t"><em class="el-placeholder">[INSERT: Domain specialism]</em></div></div>
+          <div class="hl"><div class="dot"></div><div class="t"><em class="el-placeholder">[INSERT: Additional credential or distinction]</em></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="note">Profile / CV attached</div>
+
+    <div class="el-slide-foot">
+      <div class="l">Envision Lab</div>
+      <div class="r">11 / 13</div>
+    </div>
+  </section>
+</body>
+</html>

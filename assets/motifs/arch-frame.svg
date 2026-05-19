@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 360" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round">
+  
+  <path d="M20 360 L20 180 Q20 20 120 20 Q220 20 220 180 L220 360"></path>
+  <path d="M40 360 L40 190 Q40 40 120 40 Q200 40 200 190 L200 360" opacity="0.55"></path>
+  
+  <g opacity="0.4" stroke-width="0.8">
+    <line x1="120" y1="60" x2="120" y2="340"></line>
+    <path d="M60 200 Q120 160 180 200"></path>
+    <path d="M60 250 Q120 210 180 250"></path>
+    <path d="M60 300 Q120 260 180 300"></path>
+  </g>
+</svg>

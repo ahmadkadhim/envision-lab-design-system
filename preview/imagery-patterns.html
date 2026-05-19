@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Imagery patterns</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; padding: 24px; background: var(--el-off-white); }
+  .wrap { max-width: 880px; margin: 0 auto; display: grid; gap: 22px; }
+  .h { font-family: var(--el-font-mono); font-size: 9pt; font-weight: 500; color: var(--el-fg-3); text-transform: uppercase; letter-spacing: var(--el-track-caps); }
+
+  .card { display: grid; grid-template-columns: 1fr 240px; gap: 16px; align-items: stretch; padding-bottom: 22px; border-bottom: 1px solid var(--el-rule); }
+  .card:last-of-type { border-bottom: 0; }
+  .demo { position: relative; height: 220px; overflow: hidden; background: var(--el-navy); }
+  .desc .name { font-family: var(--el-font-display); font-size: 17pt; color: var(--el-fg-1); line-height: 1.15; margin: 0; letter-spacing: -0.005em; }
+  .desc .copy { font-family: var(--el-font-sans); font-size: 10pt; color: var(--el-fg-2); line-height: 1.5; margin: 8px 0 0; }
+  .desc .rule { font-family: var(--el-font-mono); font-size: 9pt; color: var(--el-gold); text-transform: uppercase; letter-spacing: var(--el-track-caps); margin-top: 12px; }
+
+  /* Pattern 1 — full-bleed with navy overlay */
+  .full { background: url('../assets/photography/hero-portrait.jpg') center/cover no-repeat; position: relative; }
+  .full::after { content: ''; position: absolute; inset: 0;
+    background: linear-gradient(90deg, rgba(20,35,63,0.88) 0%, rgba(20,35,63,0.18) 100%); }
+  .full .typ { position: absolute; left: 16px; bottom: 14px; right: 16px; z-index: 1; color: var(--el-on-navy-1); }
+  .full .typ .e { font-family: var(--el-font-mono); font-size: 8pt; color: var(--el-gold-warm); text-transform: uppercase; letter-spacing: var(--el-track-caps); }
+  .full .typ .t { font-family: var(--el-font-display); font-size: 18pt; margin-top: 6px; line-height: 1; }
+
+  /* Pattern 2 — half-split */
+  .split { background: var(--el-off-white); display: grid; grid-template-columns: 110px 1fr; }
+  .split .img { background: url('../assets/photography/meeting.jpg') center/cover no-repeat; }
+  .split .text { padding: 18px; display: grid; align-content: center; color: var(--el-fg-1); }
+  .split .text .e { font-family: var(--el-font-mono); font-size: 8pt; color: var(--el-gold); text-transform: uppercase; letter-spacing: var(--el-track-caps); }
+  .split .text .t { font-family: var(--el-font-display); font-size: 15pt; margin-top: 6px; line-height: 1.1; }
+
+  /* Pattern 3 — small accent */
+  .accent { background: var(--el-off-white); padding: 18px; display: grid; grid-template-columns: 1fr 110px; gap: 14px; align-items: center; }
+  .accent .text { color: var(--el-fg-1); }
+  .accent .text .e { font-family: var(--el-font-mono); font-size: 8pt; color: var(--el-gold); text-transform: uppercase; letter-spacing: var(--el-track-caps); }
+  .accent .text .t { font-family: var(--el-font-display); font-size: 14pt; margin-top: 4px; line-height: 1.1; }
+  .accent .text .b { font-family: var(--el-font-sans); font-size: 9pt; color: var(--el-fg-2); margin-top: 6px; line-height: 1.5; }
+  .accent .img { background: url('../assets/photography/coaching.jpg') center/cover no-repeat; height: 110px; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="h">Three imagery patterns · honour the size</div>
+
+    <div class="card">
+      <div class="demo full">
+        <div class="typ"><div class="e">Cover</div><div class="t">ICOPE for ward leaders</div></div>
+      </div>
+      <div class="desc">
+        <div class="name">01 · Full-bleed with overlay</div>
+        <div class="copy">Photo fills the canvas behind a 90% navy gradient. Warm-cream serif type sits over it. <em>Cover slides only.</em></div>
+        <div class="rule">Use · 1× per deck</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="demo">
+        <div class="split">
+          <div class="img"></div>
+          <div class="text"><div class="e">Section opener</div><div class="t">Programme arc</div></div>
+        </div>
+      </div>
+      <div class="desc">
+        <div class="name">02 · Half-split</div>
+        <div class="copy">Photo on 35–45% of canvas, type and content on the rest. Used on section openers and the occasional transition.</div>
+        <div class="rule">Use · 3–5× per deck</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="demo">
+        <div class="accent">
+          <div class="text"><div class="e">Simulation</div><div class="t">A pair inherits a resident at 09:40.</div><div class="b">A constraint is introduced mid-scenario. The cohort observes the pivot.</div></div>
+          <div class="img"></div>
+        </div>
+      </div>
+      <div class="desc">
+        <div class="name">03 · Small accent</div>
+        <div class="copy">Photo occupies ≤ 25% of canvas. Anchors a single content slide without dominating it. <em>Most content slides have no imagery at all.</em></div>
+        <div class="rule">Use · sparingly</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

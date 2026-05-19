@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Type — display</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; padding: 28px; background: var(--el-off-white); }
+  .row { display: grid; gap: 24px; max-width: 880px; margin: 0 auto; }
+  .specimen { display: grid; grid-template-columns: 140px 1fr; gap: 18px; align-items: baseline; padding-bottom: 18px; border-bottom: 1px solid var(--el-rule); }
+  .specimen:last-child { border-bottom: 0; }
+  .label { font-family: var(--el-font-mono); font-weight: 500; font-size: 9pt; letter-spacing: var(--el-track-caps); color: var(--el-fg-3); text-transform: uppercase; }
+  .label em { display: block; font-style: normal; color: var(--el-fg-3); font-weight: 400; margin-top: 4px; font-size: 8.5pt; letter-spacing: 0.04em; }
+</style>
+</head>
+<body>
+  <div class="row">
+    <div class="specimen">
+      <div class="label">Statement<em>62pt · Source Serif 4 Regular</em></div>
+      <div class="el-statement" style="font-size:36pt">Decisions rehearsed under real constraint.</div>
+    </div>
+    <div class="specimen">
+      <div class="label">Title<em>34pt · Source Serif 4 Regular</em></div>
+      <div class="el-title" style="font-size:26pt">A two-day programme for senior leaders.</div>
+    </div>
+    <div class="specimen">
+      <div class="label">Subline<em>13pt · DM Sans Regular</em></div>
+      <div class="el-subline">Diagnose, decide, deliver, defend — rehearsed across two days on ward.</div>
+    </div>
+    <div class="specimen">
+      <div class="label">Slide numeral<em>32pt · Source Serif 4</em></div>
+      <div class="el-slide-num" style="font-size:36pt">09</div>
+    </div>
+  </div>
+</body>
+</html>

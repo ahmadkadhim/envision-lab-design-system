@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Thank you · Envision Lab</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html, body { margin: 0; padding: 0; background: #1a1a18; font-family: var(--el-font-sans); }
+  body { display: flex; align-items: center; justify-content: center; min-height: 100vh; }
+
+  .slide {
+    width: 960px; height: 540px; position: relative; overflow: hidden;
+    box-sizing: border-box;
+    background: #FBF6EE;
+    color: var(--el-ink);
+  }
+
+  .backdrop {
+    position: absolute; inset: 0;
+    background-image: url("../assets/cover-dubai-skyline.png");
+    background-size: cover;
+    background-position: right center;
+    background-repeat: no-repeat;
+    z-index: 0;
+  }
+  .wash {
+    position: absolute; inset: 0;
+    background: linear-gradient(90deg,
+      rgba(251, 246, 238, 0.97) 0%,
+      rgba(251, 246, 238, 0.92) 35%,
+      rgba(251, 246, 238, 0.60) 55%,
+      rgba(251, 246, 238, 0.18) 75%,
+      rgba(251, 246, 238, 0)    100%);
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .content {
+    position: absolute; inset: 0;
+    padding: 40px 56px 36px;
+    display: grid; grid-template-rows: auto 1fr auto;
+    z-index: 2;
+  }
+
+  .top { display: flex; justify-content: space-between; align-items: center; }
+  .lockup { display: flex; align-items: center; gap: 16px; }
+  .lockup img { height: 44px; width: auto; display: block; }
+  .lockup-divider { width: 1px; height: 36px; background: rgba(30, 29, 28, 0.18); }
+  .wordmark { display: flex; flex-direction: column; gap: 4px; }
+  .wordmark-1 {
+    font-family: var(--el-font-sans); font-weight: 700; font-size: 18pt;
+    letter-spacing: 0.06em; line-height: 1;
+    background: linear-gradient(95deg, #E8B84C 0%, #E89968 55%, #DC7A6E 100%);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .wordmark-2 { font-family: var(--el-font-sans); font-weight: 400; font-size: 7.5pt; color: #B5825D; letter-spacing: 0.02em; }
+
+  .center { display: grid; align-content: center; gap: 32px; }
+  .ty {
+    font-family: var(--el-font-display); font-weight: 400; font-size: 72pt;
+    line-height: 1; letter-spacing: -0.01em; margin: 0;
+    background: linear-gradient(110deg, #E8B84C 0%, #E8B84C 18%, #E89968 52%, #DC7A6E 82%, #C5675F 100%);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+
+  .logos-row { display: flex; gap: 28px; align-items: center; }
+  .logo-badge {
+    height: 48px; padding: 8px 18px;
+    background: rgba(255,255,255,0.7);
+    border: 1px solid rgba(232, 184, 76, 0.2);
+    border-radius: 6px;
+    display: flex; align-items: center; justify-content: center;
+    backdrop-filter: blur(4px);
+  }
+  .logo-badge img { height: 32px; width: auto; display: block; }
+  .logo-badge .placeholder {
+    font-family: var(--el-font-mono); font-size: 8pt; color: var(--el-mid);
+    text-transform: uppercase; letter-spacing: 0.1em; white-space: nowrap;
+  }
+
+  .bottom {
+    display: flex; justify-content: space-between; align-items: end;
+    padding-top: 14px; border-top: 1px solid var(--el-rule);
+  }
+  .contact-row { display: flex; gap: 36px; }
+  .contact { display: grid; gap: 3px; }
+  .contact .lbl { font-family: var(--el-font-mono); font-size: 8pt; color: var(--el-mid); text-transform: uppercase; letter-spacing: var(--el-track-caps); }
+  .contact .val { font-family: var(--el-font-sans); font-size: 10.5pt; color: var(--el-fg-1); }
+  .prepared {
+    font-family: var(--el-font-sans); font-size: 10pt; color: var(--el-body);
+    text-align: right;
+  }
+  .prepared .lbl {
+    font-family: var(--el-font-mono); font-weight: 500; font-size: 8pt;
+    color: var(--el-mid); text-transform: uppercase; letter-spacing: 0.14em;
+    display: block; margin-bottom: 3px;
+  }
+</style>
+</head>
+<body>
+  <section class="slide" data-screen-label="14 Thank you">
+
+    <div class="backdrop"></div>
+    <div class="wash"></div>
+
+    <div class="content">
+      <div class="top">
+        <div class="lockup">
+          <img src="../assets/envision-lab-icon.png" alt="Envision Lab">
+          <div class="lockup-divider"></div>
+          <div class="wordmark">
+            <div class="wordmark-1">ENVISION LAB</div>
+            <div class="wordmark-2">Professional &amp; Management Development</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="center">
+        <h1 class="ty">Thank you.</h1>
+        <div class="logos-row">
+          <div class="logo-badge"><span class="placeholder">[INSERT: KHDA logo]</span></div>
+          <div class="logo-badge"><span class="placeholder">[INSERT: Dubai SME logo]</span></div>
+          <div class="logo-badge"><span class="placeholder">[INSERT: ISO 29993]</span></div>
+          <div class="logo-badge"><span class="placeholder">[INSERT: ISO 9001]</span></div>
+        </div>
+      </div>
+
+      <div class="bottom">
+        <div class="contact-row">
+          <div class="contact"><div class="lbl">Email</div><div class="val">info@envisionlab.ae</div></div>
+          <div class="contact"><div class="lbl">Phone</div><div class="val">+971 54 557 5727</div></div>
+          <div class="contact"><div class="lbl">Web</div><div class="val">www.envisionlab.ae</div></div>
+        </div>
+        <div class="prepared">
+          <span class="lbl">Prepared for</span>
+          <em class="el-placeholder">[INSERT: Client name]</em>
+        </div>
+      </div>
+    </div>
+
+  </section>
+</body>
+</html>

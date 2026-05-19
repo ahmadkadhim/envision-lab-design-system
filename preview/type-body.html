@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Type — body</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; padding: 28px; background: var(--el-off-white); }
+  .row { display: grid; gap: 22px; max-width: 880px; margin: 0 auto; }
+  .specimen { display: grid; grid-template-columns: 140px 1fr; gap: 18px; align-items: baseline; padding-bottom: 18px; border-bottom: 1px solid var(--el-rule); }
+  .specimen:last-child { border-bottom: 0; }
+  .label { font-family: var(--el-font-mono); font-weight: 500; font-size: 9pt; letter-spacing: var(--el-track-caps); color: var(--el-fg-3); text-transform: uppercase; }
+  .label em { display: block; font-style: normal; font-weight: 400; margin-top: 4px; font-size: 8.5pt; letter-spacing: 0.04em; }
+</style>
+</head>
+<body>
+  <div class="row">
+    <div class="specimen">
+      <div class="label">Body<em>11pt · DM Sans Regular</em></div>
+      <p>Diagnose intrinsic-capacity decline using the WHO ICOPE screen and recommend a referral pathway grounded in ward-level evidence. Decisions are taken under constraint, not in theory.</p>
+    </div>
+    <div class="specimen">
+      <div class="label">Caption<em>8.5pt · DM Sans Regular</em></div>
+      <small>KHDA approved · Dubai SME certified · ISO 29993:2017</small>
+    </div>
+    <div class="specimen">
+      <div class="label">Body · medium<em>11pt · DM Sans Medium 500</em></div>
+      <p style="font-weight:500">In-card titles and quiet emphasis sit at Medium — not Bold.</p>
+    </div>
+    <div class="specimen">
+      <div class="label">Body · italic<em>11pt · DM Sans Italic</em></div>
+      <p style="font-style:italic">Italic is reserved for placeholders and the occasional quoted phrase.</p>
+    </div>
+  </div>
+</body>
+</html>

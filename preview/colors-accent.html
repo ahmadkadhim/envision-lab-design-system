@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Colors — accents</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; padding: 24px; background: var(--el-off-white); }
+  .wrap { display: grid; gap: 14px; max-width: 880px; margin: 0 auto; }
+  .heading { font-family: var(--el-font-mono); font-size: 9pt; font-weight: 500; color: var(--el-fg-3); text-transform: uppercase; letter-spacing: var(--el-track-caps); margin-bottom: 4px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .row { display: grid; grid-template-columns: 110px 1fr; gap: 16px; align-items: center; padding: 10px 12px; border-bottom: 1px solid var(--el-rule); }
+  .sw { width: 100px; height: 60px; border: 1px solid var(--el-rule); }
+  .info .name { font-family: var(--el-font-mono); font-size: 9pt; color: var(--el-fg-1); text-transform: uppercase; letter-spacing: var(--el-track-caps); font-weight: 500; }
+  .info .hex { font-family: var(--el-font-mono); font-size: 9.5pt; color: var(--el-fg-3); margin-left: 12px; }
+  .info .role { font-family: var(--el-font-sans); font-size: 10pt; color: var(--el-fg-2); margin-top: 4px; }
+
+  .rule { padding: 16px; background: var(--el-off-white-2); border-left: 2px solid var(--el-navy); }
+  .rule .h { font-family: var(--el-font-mono); font-size: 9pt; color: var(--el-navy); text-transform: uppercase; letter-spacing: var(--el-track-caps); font-weight: 500; }
+  .rule p { font-family: var(--el-font-sans); font-size: 10.5pt; color: var(--el-fg-1); margin: 8px 0 0; line-height: 1.5; }
+  .rule em { color: var(--el-navy); font-style: normal; font-weight: 500; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="heading">Logo-sourced accents — used sparingly</div>
+
+    <div class="grid">
+      <div class="row"><div class="sw" style="background:#E8B84C"></div><div class="info"><span class="name">Amber</span><span class="hex">#E8B84C</span><div class="role">Yellow-amber from logo gradient.</div></div></div>
+      <div class="row"><div class="sw" style="background:#E89968"></div><div class="info"><span class="name">Peach</span><span class="hex">#E89968</span><div class="role">Peachy-orange from logo gradient.</div></div></div>
+      <div class="row"><div class="sw" style="background:#FAEBC4"></div><div class="info"><span class="name">Amber-soft</span><span class="hex">#FAEBC4</span><div class="role">Tinted amber wash for motifs.</div></div></div>
+      <div class="row"><div class="sw" style="background:#F7DDC9"></div><div class="info"><span class="name">Peach-soft</span><span class="hex">#F7DDC9</span><div class="role">Tinted peach wash for motifs.</div></div></div>
+    </div>
+
+    <div class="rule">
+      <div class="h">Accent rule</div>
+      <p>Reserve amber and peach for motifs, data-viz second/third colours, and <em>one or two</em> intentional moments per slide. <em>Never place either adjacent to the EL logo</em> — the logo carries its own gradient and should stay the visual anchor.</p>
+    </div>
+  </div>
+</body>
+</html>

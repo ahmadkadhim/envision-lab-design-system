@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round">
+  
+  <g transform="translate(200 200)">
+    <polygon points="0,-180 50,-50 180,0 50,50 0,180 -50,50 -180,0 -50,-50"></polygon>
+    <polygon points="0,-180 50,-50 180,0 50,50 0,180 -50,50 -180,0 -50,-50" transform="rotate(45)"></polygon>
+    <circle r="64"></circle>
+    <circle r="32"></circle>
+    <g opacity="0.55">
+      <polygon points="0,-120 30,-30 120,0 30,30 0,120 -30,30 -120,0 -30,-30"></polygon>
+      <polygon points="0,-120 30,-30 120,0 30,30 0,120 -30,30 -120,0 -30,-30" transform="rotate(22.5)"></polygon>
+    </g>
+  </g>
+</svg>

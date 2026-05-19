@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+  <defs>
+    <radialGradient id="orb-peach" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#E89968" stop-opacity="0.6"></stop>
+      <stop offset="0.5" stop-color="#E8B84C" stop-opacity="0.25"></stop>
+      <stop offset="1" stop-color="#E8B84C" stop-opacity="0"></stop>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="800" fill="url(#orb-peach)"></rect>
+</svg>

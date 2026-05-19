@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Motifs library</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; padding: 24px; background: var(--el-off-white); }
+  .wrap { max-width: 880px; margin: 0 auto; display: grid; gap: 24px; }
+  .group { display: grid; gap: 12px; }
+  .group .h { font-family: var(--el-font-mono); font-size: 9pt; font-weight: 500; color: var(--el-fg-3); text-transform: uppercase; letter-spacing: var(--el-track-caps); }
+  .group .sub { font-family: var(--el-font-sans); font-size: 10pt; color: var(--el-fg-2); margin: 4px 0 8px; }
+  .row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .card { background: var(--el-off-white-2); padding: 18px; border: 1px solid var(--el-rule); display: grid; grid-template-rows: 140px auto; gap: 8px; }
+  .card.dark { background: var(--el-navy); border-color: var(--el-navy-soft); }
+  .card .frame { display: grid; place-items: center; color: var(--el-gold); }
+  .card.dark .frame { color: var(--el-gold-warm); }
+  .card .name { font-family: var(--el-font-mono); font-size: 9pt; color: var(--el-fg-1); }
+  .card.dark .name { color: var(--el-on-navy-2); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="group">
+      <div class="h">Architectural geometry · mashrabiya</div>
+      <div class="sub">Used on section openers, TOC, thank-you. Render at large scale, low opacity.</div>
+      <div class="row">
+        <div class="card"><div class="frame"><svg width="140" height="140" viewBox="0 0 400 400" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"><g transform="translate(200 200)"><polygon points="0,-180 50,-50 180,0 50,50 0,180 -50,50 -180,0 -50,-50"/><polygon points="0,-180 50,-50 180,0 50,50 0,180 -50,50 -180,0 -50,-50" transform="rotate(45)"/><circle r="64"/><circle r="32"/></g></svg></div><div class="name">mashrabiya-star</div></div>
+        <div class="card"><div class="frame"><svg width="140" height="140" viewBox="0 0 480 480" fill="none" stroke="currentColor" stroke-width="0.8"><defs><pattern id="p1" x="0" y="0" width="160" height="160" patternUnits="userSpaceOnUse"><g transform="translate(80 80)"><polygon points="0,-70 20,-20 70,0 20,20 0,70 -20,20 -70,0 -20,-20"/><polygon points="0,-70 20,-20 70,0 20,20 0,70 -20,20 -70,0 -20,-20" transform="rotate(45)"/><circle r="22"/></g></pattern></defs><rect width="480" height="480" fill="url(#p1)"/></svg></div><div class="name">mashrabiya-grid</div></div>
+        <div class="card dark"><div class="frame"><svg width="100" height="140" viewBox="0 0 240 360" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M20 360 L20 180 Q20 20 120 20 Q220 20 220 180 L220 360"/><path d="M40 360 L40 190 Q40 40 120 40 Q200 40 200 190 L200 360" opacity="0.55"/></svg></div><div class="name">arch-frame</div></div>
+      </div>
+    </div>
+
+    <div class="group">
+      <div class="h">Topographic flow · dune contours</div>
+      <div class="sub">Used on roadmap, timeline, programme arc. Behind content, mid opacity.</div>
+      <div class="row">
+        <div class="card"><div class="frame"><svg width="200" height="140" viewBox="0 0 800 400" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M0,260 C160,200 320,180 480,210 C620,236 720,250 800,230"/><path d="M0,290 C160,234 320,214 480,242 C620,266 720,278 800,260" opacity="0.85"/><path d="M0,322 C160,268 320,250 480,276 C620,298 720,306 800,292" opacity="0.7"/><path d="M0,228 C160,168 320,150 480,182 C620,210 720,224 800,202" opacity="0.55"/></svg></div><div class="name">contour-lines</div></div>
+        <div class="card"><div class="frame"><svg width="200" height="140" viewBox="0 0 800 500" fill="none"><defs><linearGradient id="d1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="currentColor" stop-opacity="0.18"/><stop offset="1" stop-color="currentColor" stop-opacity="0.6"/></linearGradient></defs><path d="M0,420 C200,280 460,360 800,260 L800,500 L0,500 Z" fill="url(#d1)" opacity="0.5"/><path d="M0,470 C260,360 540,440 800,380 L800,500 L0,500 Z" fill="url(#d1)"/></svg></div><div class="name">dune-curves</div></div>
+        <div class="card"><div class="frame"><svg width="220" height="60" viewBox="0 0 600 80" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M0,50 C90,16 180,32 270,42 C360,52 450,28 600,40"/></svg></div><div class="name">ridge-line</div></div>
+      </div>
+    </div>
+
+    <div class="group">
+      <div class="h">Editorial marks</div>
+      <div class="sub">Small-scale accents on content slides. Never inside a card.</div>
+      <div class="row">
+        <div class="card"><div class="frame"><svg width="80" height="80" viewBox="0 0 100 100" fill="currentColor"><g transform="translate(50 50)"><rect x="-3" y="-46" width="6" height="92" rx="3"/><rect x="-3" y="-46" width="6" height="92" rx="3" transform="rotate(60)"/><rect x="-3" y="-46" width="6" height="92" rx="3" transform="rotate(120)"/></g></svg></div><div class="name">asterisk</div></div>
+        <div class="card"><div class="frame"><svg width="80" height="80" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 30 L30 10"/><path d="M18 10 L30 10 L30 22"/></svg></div><div class="name">corner-arrow-up-right</div></div>
+        <div class="card"><div class="frame"><svg width="180" height="100" viewBox="0 0 200 120" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M10 30 L10 10 L30 10"/><path d="M190 30 L190 10 L170 10"/><path d="M10 90 L10 110 L30 110"/><path d="M190 90 L190 110 L170 110"/></svg></div><div class="name">bracket-corners</div></div>
+      </div>
+    </div>
+
+    <div class="group">
+      <div class="h">Orbital gradients · atmosphere</div>
+      <div class="sub">Cover, statement slides, transitions. Large blurred fills, very low opacity.</div>
+      <div class="row">
+        <div class="card dark"><div class="frame" style="overflow:hidden;width:100%"><div style="width:100%;height:100%;background:radial-gradient(circle at center, rgba(42,60,92,0.85) 0%, rgba(20,35,63,0.55) 50%, rgba(20,35,63,0) 100%);"></div></div><div class="name">orbital-navy</div></div>
+        <div class="card"><div class="frame" style="overflow:hidden;width:100%"><div style="width:100%;height:100%;background:radial-gradient(circle at center, rgba(232,184,76,0.55) 0%, rgba(185,145,63,0.25) 50%, rgba(252,250,246,0) 100%);"></div></div><div class="name">orbital-gold</div></div>
+        <div class="card"><div class="frame" style="overflow:hidden;width:100%"><div style="width:100%;height:100%;background:radial-gradient(circle at center, rgba(232,153,104,0.6) 0%, rgba(232,184,76,0.25) 50%, rgba(252,250,246,0) 100%);"></div></div><div class="name">orbital-peach</div></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

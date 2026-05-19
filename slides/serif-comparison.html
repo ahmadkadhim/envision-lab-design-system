@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Serif Comparison · Envision Lab</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300..800;1,8..60,300..800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,300..800;1,7..72,300..800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+<style>
+  html, body {
+    margin: 0; padding: 0;
+    background: #2A2A28;
+    font-family: var(--el-font-sans);
+    color: var(--el-on-navy-2);
+  }
+  .header {
+    padding: 28px 40px 14px;
+    display: flex; justify-content: space-between; align-items: baseline;
+  }
+  .header .t {
+    font-family: var(--el-font-display);
+    font-size: 22pt; color: var(--el-on-navy-1);
+    font-weight: 400; letter-spacing: -0.01em;
+  }
+  .header .m {
+    font-family: var(--el-font-mono);
+    font-size: 9pt; color: var(--el-gold-warm);
+    text-transform: uppercase; letter-spacing: var(--el-track-caps);
+  }
+
+  .stack {
+    display: grid; gap: 28px;
+    padding: 14px 40px 60px;
+    justify-items: center;
+  }
+
+  .stack-row {
+    display: grid; grid-template-rows: auto auto;
+    gap: 6px;
+  }
+  .stack-row .lbl {
+    font-family: var(--el-font-mono);
+    font-size: 9pt; color: var(--el-on-navy-3);
+    text-transform: uppercase; letter-spacing: var(--el-track-caps);
+    display: flex; gap: 14px; align-items: baseline;
+  }
+  .stack-row .lbl .n { color: var(--el-gold-warm); }
+  .stack-row .lbl .meta { color: var(--el-on-navy-3); font-size: 8pt; }
+
+  .frame {
+    width: 960px; height: 540px;
+    overflow: hidden;
+    background: var(--el-off-white);
+  }
+
+  /* Each serif panel */
+  .panel {
+    width: 960px; height: 540px;
+    background: #FEFCF7;
+    box-sizing: border-box;
+    padding: 48px 56px 42px;
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    gap: 0;
+    position: relative;
+  }
+
+  .panel .eyebrow {
+    font-family: var(--el-font-mono);
+    font-weight: 500;
+    font-size: var(--el-fs-section-prefix);
+    color: var(--el-gold);
+    text-transform: uppercase;
+    letter-spacing: var(--el-track-caps);
+    margin-bottom: 20px;
+  }
+
+  .panel .display-title {
+    font-weight: 400;
+    font-size: 56pt;
+    line-height: 0.96;
+    letter-spacing: -0.02em;
+    margin: 0;
+    max-width: 680px;
+    color: var(--el-ink);
+    text-wrap: balance;
+  }
+
+  .panel .display-title-gradient {
+    font-weight: 800;
+    font-size: 56pt;
+    line-height: 0.96;
+    letter-spacing: -0.02em;
+    margin: 24px 0 0;
+    max-width: 680px;
+    text-transform: uppercase;
+    background: linear-gradient(110deg, #E8B84C 0%, #E8B84C 18%, #E89968 52%, #DC7A6E 82%, #C5675F 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-wrap: balance;
+  }
+
+  .panel .subline {
+    font-family: var(--el-font-sans);
+    font-weight: 400;
+    font-size: 13pt;
+    color: var(--el-body);
+    margin: 22px 0 0;
+    max-width: 540px;
+    line-height: 1.45;
+  }
+
+  .panel .mid-text {
+    align-self: center;
+  }
+  .panel .mid-text .serif-34 {
+    font-weight: 400;
+    font-size: 34pt;
+    line-height: 1.08;
+    letter-spacing: -0.01em;
+    color: var(--el-ink);
+    margin: 0;
+    max-width: 640px;
+  }
+
+  .panel .foot {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+  }
+  .panel .foot .tag {
+    font-family: var(--el-font-mono);
+    font-weight: 500;
+    font-size: 9pt;
+    color: var(--el-mid);
+    text-transform: uppercase;
+    letter-spacing: var(--el-track-caps);
+  }
+  .panel .foot .num {
+    font-weight: 400;
+    font-size: 30pt;
+    color: var(--el-gold);
+    line-height: 1;
+  }
+
+  /* Font family overrides per panel */
+  .panel[data-font="newsreader"] .display-title,
+  .panel[data-font="newsreader"] .display-title-gradient,
+  .panel[data-font="newsreader"] .serif-34,
+  .panel[data-font="newsreader"] .foot .num {
+    font-family: "Newsreader", serif;
+  }
+
+  .panel[data-font="source-serif"] .display-title,
+  .panel[data-font="source-serif"] .display-title-gradient,
+  .panel[data-font="source-serif"] .serif-34,
+  .panel[data-font="source-serif"] .foot .num {
+    font-family: "Source Serif 4", serif;
+  }
+
+  .panel[data-font="literata"] .display-title,
+  .panel[data-font="literata"] .display-title-gradient,
+  .panel[data-font="literata"] .serif-34,
+  .panel[data-font="literata"] .foot .num {
+    font-family: "Literata", serif;
+  }
+
+  .panel[data-font="crimson-pro"] .display-title,
+  .panel[data-font="crimson-pro"] .display-title-gradient,
+  .panel[data-font="crimson-pro"] .serif-34,
+  .panel[data-font="crimson-pro"] .foot .num {
+    font-family: "Crimson Pro", serif;
+  }
+
+  .panel[data-font="spectral"] .display-title,
+  .panel[data-font="spectral"] .display-title-gradient,
+  .panel[data-font="spectral"] .serif-34,
+  .panel[data-font="spectral"] .foot .num {
+    font-family: "Spectral", serif;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="t">Serif comparison · display sizes</div>
+  <div class="m">Same content · four candidates + current</div>
+</div>
+
+<div class="stack">
+
+  <!-- NEWSREADER (current) -->
+  <div class="stack-row">
+    <div class="lbl">
+      <span class="n">00</span>
+      <span>Newsreader (current)</span>
+      <span class="meta">— Production Type · wedge serifs · variable</span>
+    </div>
+    <div class="frame">
+      <div class="panel" data-font="newsreader">
+        <div class="eyebrow">01 · At a glance</div>
+        <div>
+          <h1 class="display-title">Applied Learning.<br>Real Decisions.</h1>
+          <h1 class="display-title-gradient">ICOPE for<br>Ward Leaders.</h1>
+          <p class="subline">Decisions rehearsed under real ward constraints, measured against the WHO ICOPE framework.</p>
+        </div>
+        <div class="mid-text">
+          <p class="serif-34">A two-day simulation programme for senior ward leaders across four cohorts.</p>
+        </div>
+        <div class="foot">
+          <span class="tag">Newsreader · 400 + 800</span>
+          <span class="num">01</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SOURCE SERIF 4 -->
+  <div class="stack-row">
+    <div class="lbl">
+      <span class="n">01</span>
+      <span>Source Serif 4</span>
+      <span class="meta">— Adobe · bracketed serifs · optical sizing · variable</span>
+    </div>
+    <div class="frame">
+      <div class="panel" data-font="source-serif">
+        <div class="eyebrow">01 · At a glance</div>
+        <div>
+          <h1 class="display-title">Applied Learning.<br>Real Decisions.</h1>
+          <h1 class="display-title-gradient">ICOPE for<br>Ward Leaders.</h1>
+          <p class="subline">Decisions rehearsed under real ward constraints, measured against the WHO ICOPE framework.</p>
+        </div>
+        <div class="mid-text">
+          <p class="serif-34">A two-day simulation programme for senior ward leaders across four cohorts.</p>
+        </div>
+        <div class="foot">
+          <span class="tag">Source Serif 4 · 400 + 800</span>
+          <span class="num">01</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LITERATA -->
+  <div class="stack-row">
+    <div class="lbl">
+      <span class="n">02</span>
+      <span>Literata</span>
+      <span class="meta">— TypeTogether · optical sizing · warm modern · variable</span>
+    </div>
+    <div class="frame">
+      <div class="panel" data-font="literata">
+        <div class="eyebrow">01 · At a glance</div>
+        <div>
+          <h1 class="display-title">Applied Learning.<br>Real Decisions.</h1>
+          <h1 class="display-title-gradient">ICOPE for<br>Ward Leaders.</h1>
+          <p class="subline">Decisions rehearsed under real ward constraints, measured against the WHO ICOPE framework.</p>
+        </div>
+        <div class="mid-text">
+          <p class="serif-34">A two-day simulation programme for senior ward leaders across four cohorts.</p>
+        </div>
+        <div class="foot">
+          <span class="tag">Literata · 400 + 800</span>
+          <span class="num">01</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CRIMSON PRO -->
+  <div class="stack-row">
+    <div class="lbl">
+      <span class="n">03</span>
+      <span>Crimson Pro</span>
+      <span class="meta">— Jacques Le Bailly · Garamond lineage · hairline serifs · variable</span>
+    </div>
+    <div class="frame">
+      <div class="panel" data-font="crimson-pro">
+        <div class="eyebrow">01 · At a glance</div>
+        <div>
+          <h1 class="display-title">Applied Learning.<br>Real Decisions.</h1>
+          <h1 class="display-title-gradient">ICOPE for<br>Ward Leaders.</h1>
+          <p class="subline">Decisions rehearsed under real ward constraints, measured against the WHO ICOPE framework.</p>
+        </div>
+        <div class="mid-text">
+          <p class="serif-34">A two-day simulation programme for senior ward leaders across four cohorts.</p>
+        </div>
+        <div class="foot">
+          <span class="tag">Crimson Pro · 400 + 800</span>
+          <span class="num">01</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SPECTRAL -->
+  <div class="stack-row">
+    <div class="lbl">
+      <span class="n">04</span>
+      <span>Spectral</span>
+      <span class="meta">— Production Type · traditional brackets · same foundry as Newsreader</span>
+    </div>
+    <div class="frame">
+      <div class="panel" data-font="spectral">
+        <div class="eyebrow">01 · At a glance</div>
+        <div>
+          <h1 class="display-title">Applied Learning.<br>Real Decisions.</h1>
+          <h1 class="display-title-gradient">ICOPE for<br>Ward Leaders.</h1>
+          <p class="subline">Decisions rehearsed under real ward constraints, measured against the WHO ICOPE framework.</p>
+        </div>
+        <div class="mid-text">
+          <p class="serif-34">A two-day simulation programme for senior ward leaders across four cohorts.</p>
+        </div>
+        <div class="foot">
+          <span class="tag">Spectral · 400 + 800</span>
+          <span class="num">01</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

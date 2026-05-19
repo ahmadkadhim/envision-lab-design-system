@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Investment · Envision Lab</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html, body { margin: 0; padding: 0; background: #2A2A28; font-family: var(--el-font-sans); }
+  body { display: flex; align-items: center; justify-content: center; min-height: 100vh; }
+  .slide { width: 960px; height: 540px; position: relative; overflow: hidden; box-sizing: border-box; }
+
+  .slide { background: var(--el-off-white); color: var(--el-fg-2); padding: 36px 56px 80px; display: grid; grid-template-rows: auto auto 1fr auto; gap: 0; }
+
+  .prefix { font-family: var(--el-font-mono); font-weight: 500; font-size: var(--el-fs-section-prefix); color: var(--el-gold); text-transform: uppercase; letter-spacing: var(--el-track-caps); margin-bottom: 10px; }
+  .title { font-family: var(--el-font-display); font-weight: 400; font-size: 26pt; color: var(--el-fg-1); line-height: 1.05; letter-spacing: -0.014em; margin: 0; }
+  .subline { font-family: var(--el-font-sans); font-size: 10.5pt; color: var(--el-fg-2); margin: 6px 0 18px; max-width: 720px; line-height: 1.45; }
+
+  .cols { display: grid; grid-template-columns: repeat(3, 1fr); column-gap: 28px; align-content: start; }
+  .col { border-top: 1.5px solid var(--el-navy); padding-top: 12px; }
+  .col .lbl { font-family: var(--el-font-mono); font-size: 8.5pt; color: var(--el-gold); text-transform: uppercase; letter-spacing: var(--el-track-caps); }
+  .col .num { font-family: var(--el-font-display); font-weight: 400; font-size: 28pt; color: var(--el-fg-1); margin: 8px 0 4px; letter-spacing: -0.018em; line-height: 1; }
+  .col .num .cur { font-family: var(--el-font-mono); font-weight: 500; font-size: 11pt; color: var(--el-fg-3); margin-right: 5px; letter-spacing: 0.02em; vertical-align: 0.18em; }
+  .col .desc { font-family: var(--el-font-sans); font-size: 9.5pt; color: var(--el-fg-2); line-height: 1.45; margin-top: 6px; }
+  .col .items { display: grid; gap: 4px; margin-top: 10px; }
+  .item { display: grid; grid-template-columns: 12px 1fr; column-gap: 8px; align-items: baseline; font-family: var(--el-font-sans); font-size: 9pt; color: var(--el-fg-2); }
+  .item .d { width: 3px; height: 3px; background: var(--el-gold); border-radius: 50%; margin-top: 6px; }
+
+  .total { display: grid; grid-template-columns: 1fr auto; align-items: end; padding-top: 12px; border-top: 1.5px solid var(--el-gold); margin-top: 16px; }
+  .total .lbl { font-family: var(--el-font-mono); font-size: 9pt; color: var(--el-fg-3); text-transform: uppercase; letter-spacing: var(--el-track-caps); }
+  .total .lbl em { display: block; font-family: var(--el-font-sans); font-size: 9pt; color: var(--el-fg-3); font-style: normal; letter-spacing: 0; text-transform: none; margin-top: 3px; }
+  .total .v { font-family: var(--el-font-display); font-size: 28pt; font-weight: 400; color: var(--el-fg-1); letter-spacing: -0.018em; line-height: 1; }
+  .total .v .cur { font-family: var(--el-font-mono); font-weight: 500; font-size: 11pt; color: var(--el-fg-3); margin-right: 5px; vertical-align: 0.18em; }
+
+</style>
+</head>
+<body>
+  <section class="slide" data-screen-label="12 Investment">
+    <div class="prefix">09 · Investment</div>
+    <div>
+      <h1 class="title">Pricing the work, end to end.</h1>
+      <p class="subline">Pricing covers a single cohort of 18–24 participants across the full twelve weeks. Multi-cohort and Arabic-delivery options on request.</p>
+    </div>
+
+    <div class="cols">
+      <div class="col">
+        <div class="lbl">01 · Discovery + Co-design</div>
+        <div class="num"><span class="cur">AED</span>[INSERT]</div>
+        <div class="desc">Ward shadowing, decision-log review, scenario authoring with senior nursing, rubric calibration.</div>
+        <div class="items">
+          <div class="item"><div class="d"></div><div>Two senior facilitators · 6 days</div></div>
+          <div class="item"><div class="d"></div><div>Cohort materials authored and signed off</div></div>
+          <div class="item"><div class="d"></div><div>Rubric calibrated against ward standard</div></div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="lbl">02 · Delivery</div>
+        <div class="num"><span class="cur">AED</span>[INSERT]</div>
+        <div class="desc">Two days on site with one cohort. Two facilitators on the floor for the whole programme.</div>
+        <div class="items">
+          <div class="item"><div class="d"></div><div>Six live simulations</div></div>
+          <div class="item"><div class="d"></div><div>Each decision scored against rubric</div></div>
+          <div class="item"><div class="d"></div><div>Same team designs and delivers</div></div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="lbl">03 · Embed + Impact</div>
+        <div class="num"><span class="cur">AED</span>[INSERT]</div>
+        <div class="desc">Six-week embed, re-test, and written impact report into ward standard.</div>
+        <div class="items">
+          <div class="item"><div class="d"></div><div>Weekly 30-min check-ins · 6 weeks</div></div>
+          <div class="item"><div class="d"></div><div>Re-test on rubric at week 12</div></div>
+          <div class="item"><div class="d"></div><div>Findings written into ward standard</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="total">
+      <div class="lbl">Total · single cohort<em>Inclusive of materials. Excluding venue, catering, and Arabic translation.</em></div>
+      <div class="v"><span class="cur">AED</span>[INSERT]</div>
+    </div>
+
+    <div class="el-slide-foot">
+      <div class="l">Envision Lab · Offer valid for 30 days</div>
+      <div class="r">16 / 18</div>
+    </div>
+  </section>
+</body>
+</html>

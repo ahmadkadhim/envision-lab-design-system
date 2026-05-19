@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Cover · Envision Lab</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html, body { margin: 0; padding: 0; background: #1a1a18; font-family: var(--el-font-sans); }
+  body { display: flex; align-items: center; justify-content: center; min-height: 100vh; }
+
+  /* 10" × 5.62" → 960 × 540 px @ 96 dpi */
+  .slide {
+    width: 960px; height: 540px; position: relative; overflow: hidden;
+    box-sizing: border-box;
+    /* Warm cream base — picks up the photo's tone without competing */
+    background: #FBF6EE;
+    color: var(--el-ink);
+  }
+
+  /* PHOTOGRAPHIC BACKDROP — Dubai skyline anchored right, fades to cream on left */
+  .backdrop {
+    position: absolute; inset: 0;
+    background-image: url("../assets/cover-dubai-skyline.png");
+    background-size: cover;
+    background-position: right center;
+    background-repeat: no-repeat;
+    z-index: 0;
+  }
+  /* Cream wash on the left so the title sits on clean ground */
+  .wash {
+    position: absolute; inset: 0;
+    background: linear-gradient(90deg,
+      rgba(251, 246, 238, 0.96) 0%,
+      rgba(251, 246, 238, 0.86) 30%,
+      rgba(251, 246, 238, 0.50) 52%,
+      rgba(251, 246, 238, 0.10) 72%,
+      rgba(251, 246, 238, 0)    100%);
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  /* CONTENT — three-row grid over the backdrop */
+  .content {
+    position: absolute; inset: 0;
+    padding: 40px 56px 36px;
+    display: grid; grid-template-rows: auto 1fr auto;
+    z-index: 2;
+  }
+
+  /* --- Top row: logo lockup + meta --- */
+  .top { display: flex; justify-content: space-between; align-items: center; }
+  .lockup { display: flex; align-items: center; gap: 16px; }
+  .lockup img { height: 44px; width: auto; display: block; }
+  .lockup-divider {
+    width: 1px; height: 36px;
+    background: rgba(30, 29, 28, 0.18);
+  }
+  .wordmark {
+    display: flex; flex-direction: column; gap: 4px;
+  }
+  .wordmark-1 {
+    font-family: var(--el-font-sans);
+    font-weight: 700;
+    font-size: 18pt;
+    letter-spacing: 0.06em;
+    line-height: 1;
+    background: linear-gradient(95deg, #E8B84C 0%, #E89968 55%, #DC7A6E 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .wordmark-2 {
+    font-family: var(--el-font-sans);
+    font-weight: 400;
+    font-size: 7.5pt;
+    color: #B5825D;
+    letter-spacing: 0.02em;
+  }
+  .top-meta {
+    font-family: var(--el-font-mono); font-weight: 500;
+    font-size: 9pt; color: var(--el-mid);
+    text-transform: uppercase; letter-spacing: 0.14em;
+    text-align: right;
+  }
+
+  /* --- Center: large gradient title --- */
+  .center { display: grid; align-content: center; padding-top: 24px; }
+  /* center grid needs a small top nudge now the eyebrow is gone */
+  .title {
+    font-family: var(--el-font-sans);
+    font-weight: 800;
+    font-size: 56pt;
+    line-height: 0.98;
+    letter-spacing: -0.02em;
+    margin: 0;
+    max-width: 620px;
+    text-wrap: balance;
+    /* Logo-gradient title — three stops drawn from the EL wordmark */
+    background: linear-gradient(110deg,
+      #E8B84C 0%,
+      #E8B84C 18%,
+      #E89968 52%,
+      #DC7A6E 82%,
+      #C5675F 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-transform: uppercase;
+  }
+  .descriptor {
+    font-family: var(--el-font-sans); font-weight: 400;
+    font-size: 12pt; color: var(--el-body);
+    margin: 22px 0 0; max-width: 540px; line-height: 1.45;
+  }
+
+  /* --- Bottom: location + accreditation chips, mono labels --- */
+  .meta-row {
+    display: flex; justify-content: space-between; align-items: center;
+    gap: 32px;
+  }
+  .meta-cell { display: flex; align-items: center; gap: 12px; }
+  .meta-icon {
+    width: 26px; height: 26px;
+    border-radius: 50%;
+    display: grid; place-items: center;
+    flex-shrink: 0;
+    background: linear-gradient(135deg, #FDE7C8 0%, #F7CFC1 100%);
+    color: #C5675F;
+  }
+  .meta-icon svg { width: 14px; height: 14px; }
+  .meta-text {
+    font-family: var(--el-font-sans);
+    font-weight: 500;
+    font-size: 10pt;
+    color: var(--el-ink);
+    letter-spacing: 0.01em;
+  }
+  .meta-prepared {
+    font-family: var(--el-font-sans);
+    font-size: 10pt;
+    color: var(--el-body);
+  }
+  .meta-prepared .el-placeholder { color: var(--el-mid); }
+  .meta-prepared .lbl {
+    font-family: var(--el-font-mono);
+    font-weight: 500;
+    font-size: 8.5pt;
+    color: var(--el-mid);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    margin-right: 8px;
+  }
+</style>
+</head>
+<body>
+  <section class="slide" data-screen-label="01 Cover">
+
+    <div class="backdrop"></div>
+    <div class="wash"></div>
+
+    <div class="content">
+      <div class="top">
+        <div class="lockup">
+          <img src="../assets/envision-lab-icon.png" alt="Envision Lab">
+          <div class="lockup-divider"></div>
+          <div class="wordmark">
+            <div class="wordmark-1">ENVISION LAB</div>
+            <div class="wordmark-2">Professional &amp; Management Development</div>
+          </div>
+        </div>
+        <div class="top-meta">Technical Proposal · May 2026</div>
+      </div>
+
+      <div class="center">
+        <h1 class="title">ICOPE for<br>ward leaders.</h1>
+        <p class="descriptor">Decisions rehearsed under real ward constraints. Outcomes measured against the WHO ICOPE framework. Designed and delivered by a single senior team.</p>
+      </div>
+
+      <div class="meta-row">
+        <div class="meta-cell">
+          <span class="meta-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 21s-7-6.5-7-12a7 7 0 0 1 14 0c0 5.5-7 12-7 12z"/>
+              <circle cx="12" cy="9" r="2.5"/>
+            </svg>
+          </span>
+          <span class="meta-text">Dubai · United Arab Emirates</span>
+        </div>
+        <div class="meta-prepared">
+          <span class="lbl">Prepared for</span>
+          <em class="el-placeholder">[INSERT: Client name]</em>
+        </div>
+        <div class="meta-cell">
+          <span class="meta-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="9" r="5.5"/>
+              <path d="M8.5 13.5 7 21l5-3 5 3-1.5-7.5"/>
+            </svg>
+          </span>
+          <span class="meta-text">KHDA · Dubai SME · ISO 29993 · ISO 9001</span>
+        </div>
+      </div>
+    </div>
+
+  </section>
+</body>
+</html>

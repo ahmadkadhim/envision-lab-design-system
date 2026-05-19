@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  
+  <defs>
+    <linearGradient id="dune-a" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="currentColor" stop-opacity="0.08"></stop>
+      <stop offset="1" stop-color="currentColor" stop-opacity="0.32"></stop>
+    </linearGradient>
+    <linearGradient id="dune-b" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="currentColor" stop-opacity="0.18"></stop>
+      <stop offset="1" stop-color="currentColor" stop-opacity="0.6"></stop>
+    </linearGradient>
+  </defs>
+  <path d="M0,420 C200,280 460,360 800,260 L800,500 L0,500 Z" fill="url(#dune-a)"></path>
+  <path d="M0,470 C260,360 540,440 800,380 L800,500 L0,500 Z" fill="url(#dune-b)"></path>
+  <g stroke="currentColor" stroke-width="0.8" fill="none" opacity="0.5">
+    <path d="M0,420 C200,280 460,360 800,260"></path>
+    <path d="M0,470 C260,360 540,440 800,380"></path>
+  </g>
+</svg>

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Timeline · Envision Lab</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html, body { margin: 0; padding: 0; background: #2A2A28; font-family: var(--el-font-sans); }
+  body { display: flex; align-items: center; justify-content: center; min-height: 100vh; }
+  .slide { width: 960px; height: 540px; position: relative; overflow: hidden; box-sizing: border-box; }
+
+  .slide { background: linear-gradient(rgba(254,252,247,0.22), rgba(254,252,247,0.22)), url('../assets/slide-bg-gradient-waves.png') center / cover no-repeat, var(--el-off-white); color: var(--el-fg-2); padding: 36px 56px 80px; display: grid; grid-template-rows: auto auto 1fr; gap: 0; }
+
+  .prefix { font-family: var(--el-font-mono); font-weight: 500; font-size: var(--el-fs-section-prefix); color: var(--el-gold); text-transform: uppercase; letter-spacing: var(--el-track-caps); margin-bottom: 10px; }
+  .title { font-family: var(--el-font-display); font-weight: 400; font-size: 26pt; color: var(--el-fg-1); line-height: 1.05; letter-spacing: -0.01em; margin: 0 0 14px; }
+
+  .grid { display: grid; grid-template-columns: 110px 1fr 1fr; column-gap: 28px; align-content: start; }
+  .head-row { display: contents; }
+  .head-row .h { font-family: var(--el-font-mono); font-size: 8.5pt; color: var(--el-fg-3); text-transform: uppercase; letter-spacing: var(--el-track-caps); padding-bottom: 8px; border-bottom: 1.5px solid var(--el-navy); }
+
+  .row { display: contents; }
+  .row > * { padding: 8px 0; border-bottom: 1px solid var(--el-rule); }
+  .row:last-of-type > * { border-bottom: 0; }
+  .row .wk { font-family: var(--el-font-display); font-weight: 400; font-size: 15pt; color: var(--el-navy); line-height: 1.1; letter-spacing: -0.01em; }
+  .row .wk small { display: block; font-family: var(--el-font-mono); font-size: 8pt; color: var(--el-fg-3); letter-spacing: 0.12em; text-transform: uppercase; margin-top: 2px; font-weight: 500; }
+  .row .ev { font-family: var(--el-font-sans); font-size: 10pt; color: var(--el-fg-1); line-height: 1.35; }
+  .row .ev em { display: block; font-family: var(--el-font-sans); font-style: normal; font-size: 8.5pt; color: var(--el-fg-2); margin-top: 2px; font-weight: 400; }
+  .row.accent .wk { color: var(--el-gold); }
+
+</style>
+</head>
+<body>
+  <section class="slide" data-screen-label="13 Timeline">
+    <div class="prefix">09</div>
+    <h1 class="title">Timeline</h1>
+
+    <div class="grid">
+      <div class="head-row">
+        <div class="h">Block</div>
+        <div class="h">Envision Lab delivers</div>
+        <div class="h">Client provides</div>
+      </div>
+
+      <div class="row">
+        <div class="wk">Wk 1–2<small>Discovery</small></div>
+        <div class="ev">Ward shadowing · decision-log review<em>Output: scenarios bank, rubric draft.</em></div>
+        <div class="ev">Access to two wards · two senior nurses, six hours each<em>Named approver for scenarios.</em></div>
+      </div>
+      <div class="row">
+        <div class="wk">Wk 3–4<small>Co-design</small></div>
+        <div class="ev">Six scenarios drafted with senior nursing<em>Output: cohort materials v1.</em></div>
+        <div class="ev">Review session · sign-off on rubric and scenarios<em>Confirm cohort list.</em></div>
+      </div>
+      <div class="row">
+        <div class="wk">Wk 5–6<small>Delivery</small></div>
+        <div class="ev">Two cohorts, two days each · facilitation by senior team<em>Output: scored decisions per leader.</em></div>
+        <div class="ev">Training room · catered lunch · A/V<em>Cohort released from duty for the days.</em></div>
+      </div>
+      <div class="row">
+        <div class="wk">Wk 7–10<small>Embed</small></div>
+        <div class="ev">Weekly 30-min check-in per cohort<em>Tracks the 30-day change.</em></div>
+        <div class="ev">Line manager support for each leader's change<em>One named change champion.</em></div>
+      </div>
+      <div class="row">
+        <div class="wk">Wk 11–12<small>Impact</small></div>
+        <div class="ev">Re-test on rubric · findings report · ward-standard draft<em>Output: written report and presentation.</em></div>
+        <div class="ev">Senior-leader review session · 90 min<em>Decision on ward-standard adoption.</em></div>
+      </div>
+    </div>
+
+    <div class="el-slide-foot">
+      <div class="l">Envision Lab</div>
+      <div class="r">13 / 13</div>
+    </div>
+  </section>
+</body>
+</html>

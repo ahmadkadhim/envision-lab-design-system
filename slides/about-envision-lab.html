@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>About Envision Lab · Envision Lab</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html, body { margin: 0; padding: 0; background: #2A2A28; font-family: var(--el-font-sans); }
+  body { display: flex; align-items: center; justify-content: center; min-height: 100vh; }
+  .slide { width: 960px; height: 540px; position: relative; overflow: hidden; box-sizing: border-box; }
+
+  .slide {
+    background:
+      linear-gradient(rgba(254,252,247,0.22), rgba(254,252,247,0.22)),
+      url('../assets/slide-bg-gradient-waves.png') center / cover no-repeat,
+      var(--el-off-white);
+    color: var(--el-fg-2);
+    padding: 36px 56px 80px;
+    display: grid;
+    grid-template-rows: auto auto 1fr auto auto;
+    gap: 0;
+  }
+
+  .prefix { font-family: var(--el-font-mono); font-weight: 500; font-size: var(--el-fs-section-prefix); color: var(--el-gold); text-transform: uppercase; letter-spacing: var(--el-track-caps); margin-bottom: 6px; }
+  .title { font-family: var(--el-font-display); font-weight: 400; font-size: var(--el-fs-title); color: var(--el-fg-1); line-height: 1.05; letter-spacing: -0.01em; margin: 0; }
+  .subline { font-family: var(--el-font-sans); font-size: 11pt; color: var(--el-fg-2); margin: 6px 0 4px; max-width: 720px; line-height: 1.4; font-style: italic; }
+  .bio { font-family: var(--el-font-sans); font-size: 9.5pt; color: var(--el-fg-2); line-height: 1.5; margin: 6px 0 14px; max-width: 840px; }
+
+  .cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; align-self: center; }
+  .card {
+    background: var(--el-paper);
+    border-left: 3px solid var(--el-gold);
+    border-radius: 2px 6px 6px 2px;
+    padding: 12px 14px 10px;
+  }
+  .card .t { font-family: var(--el-font-display); font-weight: 400; font-size: 12pt; color: var(--el-fg-1); line-height: 1.15; letter-spacing: -0.005em; margin-bottom: 5px; }
+  .card .d { font-family: var(--el-font-sans); font-size: 8.5pt; color: var(--el-fg-2); line-height: 1.45; }
+
+  .cred-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 14px; }
+  .cred {
+    background: var(--el-ink);
+    border-radius: 4px;
+    padding: 8px 12px;
+    text-align: center;
+  }
+  .cred .label { font-family: var(--el-font-mono); font-weight: 600; font-size: 7.5pt; color: var(--el-gold-warm); text-transform: uppercase; letter-spacing: var(--el-track-caps); }
+  .cred .detail { font-family: var(--el-font-sans); font-size: 8pt; color: var(--el-light); margin-top: 2px; font-style: italic; }
+
+  .commitments { font-family: var(--el-font-sans); font-size: 8pt; color: var(--el-fg-3); text-align: center; margin-top: 8px; line-height: 1.4; }
+
+</style>
+</head>
+<body>
+  <section class="slide" data-screen-label="13 About Envision Lab">
+    <div>
+      <div class="prefix">10 · About Envision Lab</div>
+      <h1 class="title">About Envision Lab</h1>
+      <p class="subline">Dubai-based professional and management development institute. Boutique by design.</p>
+      <p class="bio">Envision Lab is a Dubai-based professional and management development institute specialising in applied, scenario-based learning for government, semi-government, and corporate clients across the UAE and the wider region. Programmes are developed in-house by our learning design team, grounded in adult learning principles and behavioural science, and evaluated against ISO 29993 learning service standards.</p>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <div class="t">Research-Backed Design</div>
+        <div class="d">Grounded in adult learning principles and behavioural science. ADDIE governed; Bloom's, Kolb's, and Kirkpatrick referenced.</div>
+      </div>
+      <div class="card">
+        <div class="t">In-House Learning Design</div>
+        <div class="d">Every programme designed by our internal team — never outsourced or off-the-shelf.</div>
+      </div>
+      <div class="card">
+        <div class="t">Expert Facilitation</div>
+        <div class="d">Delivered by practitioners with direct sector experience. Quality-controlled materials and pre-approved backups.</div>
+      </div>
+      <div class="card">
+        <div class="t">UAE-Rooted</div>
+        <div class="d">Designed in the UAE for the UAE. Arabic-first capability where required. Cases reflect local operational realities.</div>
+      </div>
+    </div>
+
+    <div class="cred-row">
+      <div class="cred"><div class="label">KHDA Approved</div><div class="detail">Permit 633282</div></div>
+      <div class="cred"><div class="label">Dubai SME Certified</div><div class="detail">UAE Professional Services</div></div>
+      <div class="cred"><div class="label">ISO 29993:2017</div><div class="detail">Learning Services</div></div>
+      <div class="cred"><div class="label">ISO 9001:2015</div><div class="detail">Quality Management</div></div>
+    </div>
+
+    <div class="commitments">Accessibility (UAE digital accessibility guidance) · Sustainability (paperless materials, low-impact venues) · Quality assurance (continuous evaluation cycles)</div>
+
+    <div class="el-slide-foot">
+      <div class="l">Envision Lab</div>
+      <div class="r">13 / 14</div>
+    </div>
+  </section>
+</body>
+</html>

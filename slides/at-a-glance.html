@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>At a glance · Envision Lab</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html, body { margin: 0; padding: 0; background: #2A2A28; font-family: var(--el-font-sans); }
+  body { display: flex; align-items: center; justify-content: center; min-height: 100vh; }
+  .slide { width: 960px; height: 540px; position: relative; overflow: hidden; box-sizing: border-box; }
+
+  .slide { background: linear-gradient(rgba(254,252,247,0.22), rgba(254,252,247,0.22)), url('../assets/slide-bg-gradient-waves.png') center / cover no-repeat, var(--el-off-white); color: var(--el-fg-2); padding: 48px 56px 80px; display: grid; grid-template-rows: auto auto 1fr; gap: 0; }
+
+  .prefix { font-family: var(--el-font-mono); font-weight: 500; font-size: var(--el-fs-section-prefix); color: var(--el-gold); text-transform: uppercase; letter-spacing: var(--el-track-caps); margin-bottom: 24px; }
+
+  .title { font-family: var(--el-font-display); font-weight: 400; font-size: 32pt; color: var(--el-fg-1); line-height: 1.05; letter-spacing: -0.01em; margin: 0; max-width: 720px; }
+  .subline { font-family: var(--el-font-sans); font-weight: 400; font-size: 13.5pt; color: var(--el-fg-2); line-height: 1.4; margin: 14px 0 0; max-width: 700px; }
+
+  .grid { display: grid; grid-template-columns: repeat(5, 1fr); align-self: center; margin-top: 4px; }
+  .col { padding: 4px 24px 4px; }
+  .col + .col { border-left: 1px solid var(--el-gold-25); }
+  .col .lbl { font-family: var(--el-font-mono); font-weight: 500; font-size: 8.5pt; color: var(--el-gold); text-transform: uppercase; letter-spacing: var(--el-track-caps); }
+  .col .val { font-family: var(--el-font-display); font-weight: 400; font-size: 19pt; color: var(--el-fg-1); margin-top: 12px; line-height: 1.15; }
+  .col .sub { font-family: var(--el-font-sans); font-size: 9.5pt; color: var(--el-fg-3); margin-top: 4px; }
+
+</style>
+</head>
+<body>
+  <section class="slide" data-screen-label="05 At a glance">
+    <div>
+      <div class="prefix">02</div>
+      <h1 class="title">At a Glance</h1>
+      <p class="subline">A two-day simulation programme for senior ward leaders. Diagnose, decide, deliver, and defend — rehearsed under real ward constraints.</p>
+    </div>
+
+    <div></div>
+
+    <div class="grid">
+      <div class="col"><div class="lbl">Duration</div><div class="val">2 days</div><div class="sub">In-person, on site</div></div>
+      <div class="col"><div class="lbl">Cohort</div><div class="val">18–24</div><div class="sub">Per cohort</div></div>
+      <div class="col"><div class="lbl">Cohorts</div><div class="val">4</div><div class="sub">~96 participants</div></div>
+      <div class="col"><div class="lbl">Language</div><div class="val">English</div><div class="sub">Arabic on request</div></div>
+      <div class="col"><div class="lbl">Methodology</div><div class="val">WHO ICOPE</div><div class="sub">Simulation-led</div></div>
+    </div>
+
+    <div class="el-slide-foot">
+      <div class="l">Envision Lab</div>
+      <div class="r">05 / 13</div>
+    </div>
+  </section>
+</body>
+</html>

@@ -1,0 +1,6 @@
+# Development artifacts
+uploads/
+scraps/
+
+# macOS
+.DS_Store
