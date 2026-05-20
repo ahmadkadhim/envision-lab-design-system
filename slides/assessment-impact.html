@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Assessment &amp; Impact · Envision Lab</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html, body { margin: 0; padding: 0; background: #2A2A28; font-family: var(--el-font-sans); }
+  body { display: flex; align-items: center; justify-content: center; min-height: 100vh; }
+  .slide { width: 960px; height: 540px; position: relative; overflow: hidden; box-sizing: border-box; }
+
+  .slide { background: linear-gradient(rgba(254,252,247,0.18), rgba(254,252,247,0.18)), url('../assets/slide-bg-gradient-waves.png') center / cover no-repeat, var(--el-off-white); color: var(--el-fg-2); padding: 40px 56px 80px; display: grid; grid-template-rows: auto auto 1fr auto; gap: 0; }
+
+  .prefix { font-family: var(--el-font-mono); font-weight: 500; font-size: var(--el-fs-section-prefix); color: var(--el-gold); text-transform: uppercase; letter-spacing: var(--el-track-caps); margin-bottom: 8px; }
+  .title { font-family: var(--el-font-display); font-weight: 400; font-size: var(--el-fs-title); color: var(--el-fg-1); line-height: 1.05; letter-spacing: -0.01em; margin: 0; }
+  .subline { font-family: var(--el-font-sans); font-size: 11pt; color: var(--el-fg-2); margin: 8px 0 20px; max-width: 720px; line-height: 1.4; font-style: italic; }
+
+  .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; align-self: start; }
+  .step { padding: 0 24px; }
+  .step + .step { border-left: 1px solid var(--el-gold-25); }
+  .step .num { font-family: var(--el-font-mono); font-weight: 500; font-size: 8.5pt; color: var(--el-gold); text-transform: uppercase; letter-spacing: var(--el-track-caps); }
+  .step .name { font-family: var(--el-font-display); font-weight: 400; font-size: 16pt; color: var(--el-fg-1); margin: 8px 0 8px; line-height: 1.15; }
+  .step .desc { font-family: var(--el-font-sans); font-size: 9.5pt; color: var(--el-fg-2); line-height: 1.45; }
+  .step:first-child { padding-left: 0; }
+
+  .kirk-band {
+    align-self: end;
+    background: var(--el-off-white-2);
+    border-radius: var(--el-radius-md);
+    padding: 14px 20px 12px;
+    display: grid; grid-template-columns: auto repeat(4, 1fr); gap: 0; align-items: start;
+  }
+  .kirk-label { font-family: var(--el-font-mono); font-weight: 500; font-size: 7.5pt; color: var(--el-gold); text-transform: uppercase; letter-spacing: var(--el-track-caps); padding-right: 18px; padding-top: 2px; white-space: nowrap; }
+  .kirk { padding: 0 12px; }
+  .kirk + .kirk { border-left: 1px solid var(--el-rule); }
+  .kirk .lvl { font-family: var(--el-font-mono); font-weight: 500; font-size: 8pt; color: var(--el-fg-1); letter-spacing: 0.04em; }
+  .kirk .lvl-name { font-family: var(--el-font-sans); font-weight: 500; font-size: 9pt; color: var(--el-fg-1); margin-top: 2px; }
+  .kirk .lvl-desc { font-family: var(--el-font-sans); font-size: 8pt; color: var(--el-fg-3); margin-top: 1px; }
+
+  .disclaimer { font-family: var(--el-font-sans); font-size: 8pt; color: var(--el-fg-3); margin-top: 8px; font-style: italic; line-height: 1.4; }
+
+</style>
+</head>
+<body>
+  <section class="slide" data-screen-label="15 Assessment &amp; Impact">
+    <div>
+      <div class="prefix">11</div>
+      <h1 class="title">How We Know It Worked</h1>
+      <p class="subline">Evaluated against the Kirkpatrick model — proportionate, ethical, non-exam-based.</p>
+    </div>
+
+    <div class="steps">
+      <div class="step">
+        <div class="num">Step 01</div>
+        <div class="name">Pre-Programme</div>
+        <div class="desc"><em class="el-placeholder">[INSERT: Baseline diagnostic — assessment type, duration, what metric is captured.]</em></div>
+      </div>
+      <div class="step">
+        <div class="num">Step 02</div>
+        <div class="name">In-Session</div>
+        <div class="desc"><em class="el-placeholder">[INSERT: Live checks — facilitator observation rubric on specific activities/competencies.]</em></div>
+      </div>
+      <div class="step">
+        <div class="num">Step 03</div>
+        <div class="name">Post-Programme</div>
+        <div class="desc"><em class="el-placeholder">[INSERT: Impact measurement — Level 2 assessment + participant feedback + N-day check-in on application.]</em></div>
+      </div>
+    </div>
+
+    <div>
+      <div class="kirk-band">
+        <div class="kirk-label">Kirkpatrick</div>
+        <div class="kirk">
+          <div class="lvl">L1</div>
+          <div class="lvl-name">Reaction</div>
+          <div class="lvl-desc">Experience quality</div>
+        </div>
+        <div class="kirk">
+          <div class="lvl">L2</div>
+          <div class="lvl-name">Learning</div>
+          <div class="lvl-desc">Knowledge &amp; skill shift</div>
+        </div>
+        <div class="kirk">
+          <div class="lvl">L3</div>
+          <div class="lvl-name">Behaviour</div>
+          <div class="lvl-desc">On-the-job application</div>
+        </div>
+        <div class="kirk">
+          <div class="lvl">L4</div>
+          <div class="lvl-name">Results</div>
+          <div class="lvl-desc">Operational outcome</div>
+        </div>
+      </div>
+      <div class="disclaimer"><em class="el-placeholder">[INSERT: L4 scope disclaimer — e.g., "Within the 2-day programme window, we measure L1–L3 directly. L4 (Results) is not claimed within this scope — it requires the client's own follow-up over 60–90 days."]</em></div>
+    </div>
+
+    <div class="el-slide-foot">
+      <div class="l">Envision Lab</div>
+      <div class="r">15 / 19</div>
+    </div>
+  </section>
+</body>
+</html>
