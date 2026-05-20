@@ -63,18 +63,18 @@ This system is reconciled against the source PPTX files supplied by Tara:
 | 02 | Table of Contents | `table-of-contents.html` | 14-item TOC with mashrabiya motif |
 | 03 | Why Envision Lab | `why-envision-lab.html` | Four icon-circle differentiator cards + DDDD framework + credentials |
 | 04 | Understanding Your Challenge | `understanding-your-challenge.html` | 3 pressure bullets + OUR RESPONSE box |
-| 05 | Programme Objective | `programme-objective.html` | Objective statement + 3 capability bullets |
-| 06 | Programme | `section-opener.html` | Section opener with arch-frame motif + mega numeral |
-| 07 | At a Glance | `at-a-glance.html` | Five-column key facts grid |
-| 08 | Programme Arc | `programme-arc.html` | Multi-day programme timeline |
-| 09 | Programme Flow | `programme-flow.html` | Session-by-session breakdown |
-| 10 | Learning Experience | `learning-experience.html` | 2×3 method card grid + design-standards footer ribbon |
-| 11 | Frameworks | `frameworks.html` | Methodology cards |
-| 12 | Simulation | `simulation.html` | Simulation description with photo accent |
-| 13 | Simulation — Structure | `simulation-structure.html` | 2×2 block grid (do / gain / powerful / matters) |
-| 14 | Learning Outcomes | `outcomes.html` | Numbered outcome items |
-| 15 | Assessment & Impact | `assessment-impact.html` | 3-step measurement flow + Kirkpatrick 4-level legend |
-| 16 | Delivery & Technology | `delivery-technology.html` | 4 blocks: format, TalentLMS, NeuroBoost-AI, materials |
+| 05 | Programme | `section-opener.html` | Section opener with arch-frame motif + mega numeral |
+| 06 | Programme at a Glance | `at-a-glance.html` | Five-column key facts grid |
+| 07 | Programme Objective | `programme-objective.html` | Objective statement + 3 capability bullets |
+| 08 | Learning Outcomes | `outcomes.html` | Numbered outcome items |
+| 09 | Learning Experience | `learning-experience.html` | 2×3 method card grid + design-standards footer ribbon |
+| 10 | Frameworks | `frameworks.html` | Methodology cards |
+| 11 | Programme Arc | `programme-arc.html` | Multi-day programme timeline |
+| 12 | Programme Flow | `programme-flow.html` | Session-by-session breakdown |
+| 13 | Simulation | `simulation.html` | Simulation description with photo accent |
+| 14 | Simulation — Structure | `simulation-structure.html` | 2×2 block grid (do / gain / powerful / matters) |
+| 15 | Delivery & Technology | `delivery-technology.html` | 4 blocks: format, TalentLMS, NeuroBoost-AI, materials |
+| 16 | Assessment & Impact | `assessment-impact.html` | 3-step measurement flow + Kirkpatrick 4-level legend |
 | 17 | Delivery Team | `delivery-team.html` | Two facilitator cards with `[INSERT:]` placeholders |
 | 18 | Thank You | `thank-you.html` | Contact info + credential logo badges + skyline photo |
 | 19 | Timeline | `timeline.html` | Milestone timeline (appendix) |
