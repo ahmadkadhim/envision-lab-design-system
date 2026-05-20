@@ -15,9 +15,10 @@ v5 builds on the single-surface system established in v4. Key changes:
 1. **Restructured the programme section.** A generic "Programme" section opener now introduces the programme block (At a Glance → Programme Arc → Programme Flow → Frameworks → Simulation → Outcomes).
 2. **Redesigned "Why Envision Lab."** Replaced left-border card panels with centred gradient icon-circle cards on off-white. Four SVG icons (pencil, play-circle, book, map-pin) sit inside warm gradient circles. DDDD framework and credentials ribbon flow without a divider.
 3. **Genericised template content.** Delivery Team and Section Opener slides now use `[INSERT:]` placeholders throughout — no baked-in facilitator names or programme-specific copy.
-4. **Removed About Envision Lab slide** — redundant with Why Envision Lab.
-5. **Moved Timeline after Thank You** (slide 13) as an optional appendix.
-6. **13-slide deck** (down from 14 in v4).
+4. **Added 6 new content slides** — Understanding Your Challenge, Programme Objective, Learning Experience & Delivery, Simulation Structure, Assessment & Impact, Delivery & Technology. Closes the gap with the proposal-gen skill's 16-slide content spec.
+5. **Removed About Envision Lab slide** — redundant with Why Envision Lab.
+6. **Moved Timeline after Thank You** (slide 19) as an optional appendix.
+7. **19-slide deck** (up from 13 in v4, covering the full proposal-gen content spec plus TOC, section opener, and timeline).
 
 ### Earlier milestones
 
@@ -43,8 +44,8 @@ This system is reconciled against the source PPTX files supplied by Tara:
 | `README.md` | You are here. Brand brief + visual foundations. |
 | `style-rules.md` | Voice + content rules (banned words, anti-hallucination, UAE fit) + visual guardrails. |
 | `colors_and_type.css` | All color, type, geometry, and spacing tokens as CSS custom properties + base element styles. Single source of truth. |
-| `slides/` | All 13 slide templates (cover, TOC, content, section openers, thank-you, timeline). |
-| `slides/index.html` | Full deck overview — loads all 13 slides in a scrollable stack. |
+| `slides/` | All 19 slide templates (cover, TOC, content, section openers, thank-you, timeline). |
+| `slides/index.html` | Full deck overview — loads all 19 slides in a scrollable stack. |
 | `documents/` | Long-form A4 document and one-pager samples. (Pending separate refresh.) |
 | `assets/` | Logos, photography, motifs, icons, gradient-wave background. |
 | `assets/photography/` | UAE-context training photos for cover and accent use. |
@@ -54,23 +55,29 @@ This system is reconciled against the source PPTX files supplied by Tara:
 
 ---
 
-## Slide templates (13)
+## Slide templates (19)
 
 | # | Template | File | Role |
 |---|---|---|---|
 | 01 | Cover | `cover.html` | Full-bleed photo + title + client logo placeholder |
-| 02 | Table of Contents | `table-of-contents.html` | 9-item TOC with mashrabiya motif |
+| 02 | Table of Contents | `table-of-contents.html` | 14-item TOC with mashrabiya motif |
 | 03 | Why Envision Lab | `why-envision-lab.html` | Four icon-circle differentiator cards + DDDD framework + credentials |
-| 04 | Programme | `section-opener.html` | Section opener with arch-frame motif + mega numeral |
-| 05 | At a Glance | `at-a-glance.html` | Five-column key facts grid |
-| 06 | Programme Arc | `programme-arc.html` | Multi-day programme timeline |
-| 07 | Programme Flow | `programme-flow.html` | Session-by-session breakdown |
-| 08 | Frameworks | `frameworks.html` | Methodology cards |
-| 09 | Simulation | `simulation.html` | Simulation description with photo accent |
-| 10 | Learning Outcomes | `outcomes.html` | Numbered outcome items |
-| 11 | Delivery Team | `delivery-team.html` | Two facilitator cards with `[INSERT:]` placeholders |
-| 12 | Thank You | `thank-you.html` | Contact info + credential logo badges + skyline photo |
-| 13 | Timeline | `timeline.html` | Milestone timeline (appendix) |
+| 04 | Understanding Your Challenge | `understanding-your-challenge.html` | 3 pressure bullets + OUR RESPONSE box |
+| 05 | Programme | `section-opener.html` | Section opener with arch-frame motif + mega numeral |
+| 06 | Programme at a Glance | `at-a-glance.html` | Five-column key facts grid |
+| 07 | Programme Objective | `programme-objective.html` | Objective statement + 3 capability bullets |
+| 08 | Learning Outcomes | `outcomes.html` | Numbered outcome items |
+| 09 | Learning Experience | `learning-experience.html` | 2×3 method card grid + design-standards footer ribbon |
+| 10 | Frameworks | `frameworks.html` | Methodology cards |
+| 11 | Programme Arc | `programme-arc.html` | Multi-day programme timeline |
+| 12 | Programme Flow | `programme-flow.html` | Session-by-session breakdown |
+| 13 | Simulation | `simulation.html` | Simulation description with photo accent |
+| 14 | Simulation — Structure | `simulation-structure.html` | 2×2 block grid (do / gain / powerful / matters) |
+| 15 | Delivery & Technology | `delivery-technology.html` | 4 blocks: format, TalentLMS, NeuroBoost-AI, materials |
+| 16 | Assessment & Impact | `assessment-impact.html` | 3-step measurement flow + Kirkpatrick 4-level legend |
+| 17 | Delivery Team | `delivery-team.html` | Two facilitator cards with `[INSERT:]` placeholders |
+| 18 | Thank You | `thank-you.html` | Contact info + credential logo badges + skyline photo |
+| 19 | Timeline | `timeline.html` | Milestone timeline (appendix) |
 
 ---
 

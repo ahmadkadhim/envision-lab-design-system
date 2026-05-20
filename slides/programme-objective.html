@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Programme Objective · Envision Lab</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html, body { margin: 0; padding: 0; background: #2A2A28; font-family: var(--el-font-sans); }
+  body { display: flex; align-items: center; justify-content: center; min-height: 100vh; }
+  .slide { width: 960px; height: 540px; position: relative; overflow: hidden; box-sizing: border-box; }
+
+  .slide { background: linear-gradient(rgba(254,252,247,0.18), rgba(254,252,247,0.18)), url('../assets/slide-bg-gradient-waves.png') center / cover no-repeat, var(--el-off-white); color: var(--el-fg-2); padding: 42px 56px 80px; display: grid; grid-template-rows: auto auto 1fr; gap: 0; }
+
+  .prefix { font-family: var(--el-font-mono); font-weight: 500; font-size: var(--el-fs-section-prefix); color: var(--el-gold); text-transform: uppercase; letter-spacing: var(--el-track-caps); margin-bottom: 10px; }
+  .title { font-family: var(--el-font-display); font-weight: 400; font-size: var(--el-fs-title); color: var(--el-fg-1); line-height: 1.05; letter-spacing: -0.01em; margin: 0; }
+  .subline { font-family: var(--el-font-sans); font-size: 11pt; color: var(--el-fg-2); margin: 8px 0 0; max-width: 720px; line-height: 1.4; font-style: italic; }
+
+  .content { display: grid; gap: 28px; align-self: center; }
+
+  .objective-panel {
+    background: var(--el-off-white-2);
+    border-radius: var(--el-radius-md);
+    padding: 22px 24px;
+    max-width: 760px;
+  }
+  .objective-panel .text { font-family: var(--el-font-sans); font-size: 12pt; color: var(--el-fg-1); line-height: 1.55; }
+
+  .capabilities { display: grid; gap: 14px; }
+  .cap-label { font-family: var(--el-font-mono); font-weight: 500; font-size: 8.5pt; color: var(--el-gold); text-transform: uppercase; letter-spacing: var(--el-track-caps); margin-bottom: 4px; }
+  .cap-items { display: flex; gap: 24px; align-items: baseline; }
+  .cap { display: flex; align-items: baseline; gap: 12px; }
+  .cap .dot { width: 6px; height: 6px; background: var(--el-gold); border-radius: 50%; flex-shrink: 0; }
+  .cap .t { font-family: var(--el-font-sans); font-weight: 500; font-size: 11pt; color: var(--el-fg-1); }
+
+</style>
+</head>
+<body>
+  <section class="slide" data-screen-label="07 Programme Objective">
+    <div>
+      <div class="prefix">04</div>
+      <h1 class="title">Programme Objective</h1>
+      <p class="subline">What participants will be able to do — observable, measurable, applied.</p>
+    </div>
+
+    <div class="content">
+      <div class="objective-panel">
+        <div class="text"><em class="el-placeholder">[INSERT: Objective statement in canonical form — "To equip [audience] with the [mindset/frameworks/behaviours] needed to [outcome]." Subject = participants; verb = equip; outcome = a specific work behaviour. Max ~50–70 words.]</em></div>
+      </div>
+
+      <div class="capabilities">
+        <div class="cap-label">Core capabilities</div>
+        <div class="cap-items">
+          <div class="cap"><div class="dot"></div><div class="t"><em class="el-placeholder">[INSERT: Capability 1 — ≤8 words, observable]</em></div></div>
+          <div class="cap"><div class="dot"></div><div class="t"><em class="el-placeholder">[INSERT: Capability 2 — ≤8 words, observable]</em></div></div>
+          <div class="cap"><div class="dot"></div><div class="t"><em class="el-placeholder">[INSERT: Capability 3 — ≤8 words, observable]</em></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="el-slide-foot">
+      <div class="l">Envision Lab</div>
+      <div class="r">07 / 19</div>
+    </div>
+  </section>
+</body>
+</html>

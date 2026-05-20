@@ -85,7 +85,7 @@ If a refinement is requested on a specific section, regenerate only that section
 
 ---
 
-## Visual guardrails (v4, May 2026)
+## Visual guardrails (v5, May 2026)
 
 These are the visual-side equivalents of the banned-word list. They exist to keep the system from drifting toward AI-default aesthetics.
 

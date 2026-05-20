@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Understanding Your Challenge · Envision Lab</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html, body { margin: 0; padding: 0; background: #2A2A28; font-family: var(--el-font-sans); }
+  body { display: flex; align-items: center; justify-content: center; min-height: 100vh; }
+  .slide { width: 960px; height: 540px; position: relative; overflow: hidden; box-sizing: border-box; }
+
+  .slide { background: linear-gradient(rgba(254,252,247,0.18), rgba(254,252,247,0.18)), url('../assets/slide-bg-gradient-waves.png') center / cover no-repeat, var(--el-off-white); color: var(--el-fg-2); padding: 42px 56px 80px; display: grid; grid-template-rows: auto auto 1fr auto; gap: 0; }
+
+  .prefix { font-family: var(--el-font-mono); font-weight: 500; font-size: var(--el-fs-section-prefix); color: var(--el-gold); text-transform: uppercase; letter-spacing: var(--el-track-caps); margin-bottom: 10px; }
+  .title { font-family: var(--el-font-display); font-weight: 400; font-size: var(--el-fs-title); color: var(--el-fg-1); line-height: 1.05; letter-spacing: -0.01em; margin: 0; }
+  .headline { font-family: var(--el-font-sans); font-size: 12pt; color: var(--el-fg-2); margin: 12px 0 0; max-width: 720px; line-height: 1.45; }
+
+  .pressures { display: grid; gap: 16px; align-self: start; margin-top: 24px; }
+  .pressure { display: grid; grid-template-columns: 14px 1fr; column-gap: 12px; align-items: baseline; }
+  .pressure .dot { width: 6px; height: 6px; background: var(--el-gold); border-radius: 50%; margin-top: 7px; }
+  .pressure .lbl { font-family: var(--el-font-sans); font-weight: 500; font-size: 10.5pt; color: var(--el-fg-1); }
+  .pressure .desc { font-family: var(--el-font-sans); font-size: 10pt; color: var(--el-fg-2); margin-top: 2px; line-height: 1.4; }
+
+  .response {
+    background: var(--el-off-white-2);
+    border-radius: var(--el-radius-md);
+    padding: 18px 20px;
+    align-self: end;
+  }
+  .response .lbl { font-family: var(--el-font-mono); font-weight: 500; font-size: 8.5pt; color: var(--el-gold); text-transform: uppercase; letter-spacing: var(--el-track-caps); margin-bottom: 8px; }
+  .response .body { font-family: var(--el-font-sans); font-size: 10.5pt; color: var(--el-fg-1); line-height: 1.5; }
+
+</style>
+</head>
+<body>
+  <section class="slide" data-screen-label="04 Understanding Your Challenge">
+    <div>
+      <div class="prefix">02</div>
+      <h1 class="title">Understanding Your Challenge</h1>
+      <p class="headline"><em class="el-placeholder">[INSERT: One-sentence interpretation of the client's operational reality — ≤12 words, using their language.]</em></p>
+    </div>
+
+    <div class="pressures">
+      <div class="pressure">
+        <div class="dot"></div>
+        <div>
+          <div class="lbl">Operational reality</div>
+          <div class="desc"><em class="el-placeholder">[INSERT: What is actually happening on the ground — specific case mix, workflow, incident patterns. ≤60 chars.]</em></div>
+        </div>
+      </div>
+      <div class="pressure">
+        <div class="dot"></div>
+        <div>
+          <div class="lbl">Capability gap</div>
+          <div class="desc"><em class="el-placeholder">[INSERT: Where the current approach falls short — what's missing, what creates risk. ≤60 chars.]</em></div>
+        </div>
+      </div>
+      <div class="pressure">
+        <div class="dot"></div>
+        <div>
+          <div class="lbl">Future-state demand</div>
+          <div class="desc"><em class="el-placeholder">[INSERT: What forces are coming — regulatory, market, strategic. ≤60 chars.]</em></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="response">
+      <div class="lbl">Our Response</div>
+      <div class="body"><em class="el-placeholder">[INSERT: Programme does X, using Y (frameworks/methods), under Z (delivery shape/conditions). Max 2 sentences; name concrete deliverables, not marketing claims.]</em></div>
+    </div>
+
+    <div class="el-slide-foot">
+      <div class="l">Envision Lab</div>
+      <div class="r">04 / 19</div>
+    </div>
+  </section>
+</body>
+</html>
